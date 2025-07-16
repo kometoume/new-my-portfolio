@@ -56,7 +56,7 @@ export default function Home() {
               はじめまして。八木美智惠と申します。大学院修了後、美術教員および教育機関の助手として教育現場で経験を積みました。その後、職業訓練校でWebデザインの知識を習得。現在は正社員のWebコーダーとして5年間、フルリモート環境下で業務に従事しています。自己管理を意識しながら業務を遂行し、円滑なコミュニケーションを心がけています。
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Web制作に携わる中で、より高い専門性を身につけ、スキルを向上させたいという思いが強まり、今後の成長を見据えて転職を決意いたしました。このポートフォリオサイトも、自身でReactとNext.jsを用いて開発しており、現在はTailwind CSSやTypeScript、Node.jsなどの技術も積極的に学習・活用しています。また、GitやGitHubを用いたバージョン管理にも取り組み、実務での経験を活かしながら、常に新しい知識を吸収し柔軟に対応できる力を身につけています。さらなる成長を目指して、前向きに取り組んでまいります。
+              Web制作に携わる中で、より高い専門性を身につけ、スキルを向上させたいという思いが強まり、今後の成長を見据えて転職を決意いたしました。このポートフォリオサイトは、ReactとNext.jsで開発し、バックエンドにはFirebaseを導入してサイトのアナリティクスを計測しています。現在はTailwind CSS、TypeScript、Node.js、そしてFirebaseの各種サービスなど、幅広い技術を積極的に学習中です。また、GitやGitHubを用いたバージョン管理にも取り組み、実務での経験を活かしながら、常に新しい知識を吸収し柔軟に対応できる力を身につけています。さらなる成長を目指して、前向きに取り組んでまいります。
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-700 mt-8 mb-4">これまでの経験</h3>
@@ -69,7 +69,7 @@ export default function Home() {
 
             <h3 className="text-2xl font-semibold text-gray-700 mt-8 mb-4">学習中の技術・今後の目標</h3>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>React, Next.js, Tailwind CSS, TypeScript, Node.jsなどの技術を積極的に学習・活用中</li>
+              <li>React、Next.js、Tailwind CSS、TypeScript、Node.js、Firebaseなどの技術を積極的に学習・活用中</li>
               <li>GitやGitHubを用いたバージョン管理に取り組む</li>
               <li>さらなる専門性の向上とスキルアップを目指して転職を検討中</li>
             </ul>

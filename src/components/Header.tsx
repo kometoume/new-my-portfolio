@@ -68,7 +68,7 @@ export default function Header() {
 
         {/* モバイルメニューボタン */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-2xl focus:outline-none text-gray-800">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-2xl focus:outline-none text-gray-800 cursor-pointer">
             <svg
               className="w-8 h-8"
               fill="none"

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.17",
+    "firebase": "^11.10.0",
     "next": "15.4.1",
     "nodemailer": "^7.0.5",
     "react": "19.1.0",
