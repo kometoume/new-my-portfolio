@@ -12,15 +12,32 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* スムーズスクロールを有効にする */
+}
+
+/* 各セクションのIDに適用する基本的な調整 */
+section[id] {
+  scroll-margin-top: 80px; /* PCでのナビバーの高さに合わせる */
+}
+
+/* --- モバイル専用の調整 --- */
+@media (max-width: 767px) { /* Tailwind CSSのデフォルトのmdブレイクポイント(768px)は通常768px以上なので、max-width: 767pxが適切 */
+  section[id] {
+    scroll-margin-top: 60px; /* モバイルでのナビバーの高さに合わせる */
+  }
+}
+
+/* ぶら下げインデント */
+.hanging-indent {
+  text-indent: -1em;
+  padding-left: 1em;
 }
