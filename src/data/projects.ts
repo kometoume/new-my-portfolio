@@ -99,20 +99,20 @@ export const projects: Project[] = [
       'Tailwind CSSを使ったシンプルかつ直感的なUIで、モバイルからの使用も想定',
     ],
   },
-  {
-    id: 'calendar-app', // ユニークなIDを設定 (例: 'calendar-app' など)
-    title: '筋トレ記録カレンダー (自主制作)',
-    description:
-      'Reactを使ったシンプルなカレンダーコンポーネントです。日付の表示、月の移動、今日の表示、そして各日付ごとのトレーニング記録の管理とモーダル表示の機能を持っています。',
-    image: '/images/calendar-app-thumbnail.png', // あなたのカレンダーアプリのスクリーンショット画像パスに置き換えてください
-    technologies: ['React', 'Next.js', 'TypeScript', 'HTML', 'Tailwind CSS', 'LocalStorage'],
-    demoLink: '/calendar', // あなたのポートフォリオサイト内のカレンダーアプリのURLに置き換えてください
-    points: [
-      '時刻の自動更新',
-      'ローカルストレージによるトレーニングデータの永続保存',
-      '日付計算ロジックの実装',
-      '今日の日付のハイライト処理',
-      'イベントハンドリングとユーザーインタラクション',
-    ],
-  },
+//   {
+//     id: 'calendar-app', 
+//     title: '筋トレ記録カレンダー (自主制作)',
+//     description:
+//       'Reactを使ったシンプルなカレンダーコンポーネントです。日付の表示、月の移動、今日の表示、そして各日付ごとのトレーニング記録の管理とモーダル表示の機能を持っています。',
+//     image: '/images/calendar-app-thumbnail.png', 
+//     technologies: ['React', 'Next.js', 'TypeScript', 'HTML', 'Tailwind CSS', 'LocalStorage'],
+//     demoLink: '/calendar', 
+//     points: [
+//       '時刻の自動更新',
+//       'ローカルストレージによるトレーニングデータの永続保存',
+//       '日付計算ロジックの実装',
+//       '今日の日付のハイライト処理',
+//       'イベントハンドリングとユーザーインタラクション',
+//     ],
+//   },
 ];
