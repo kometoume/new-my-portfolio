@@ -84,21 +84,21 @@ export const projects: Project[] = [
       '図版作成',
     ],
   },
-  {
-    id: 'todo-app', // ユニークなIDを設定 (例: 'todo-app' など)
-    title: '筋トレ習慣化Todoリストアプリ（自主制作）',
-    description:
-      '筋トレ初心者でも習慣化しやすいように設計されたTodo管理アプリです。ReactとNext.jsで構築し、最低限必要なトレーニング3種目を毎回初期表示。完了後に再表示される仕組みによって継続をサポートします。ブラウザのローカルストレージを使用し、データを永続化しています。',
-    image: '/images/todo-app-thumbnail.png', // このアプリのスクリーンショット画像パスに置き換えてください
-    technologies: ['React', 'Next.js', 'TypeScript', 'HTML', 'Tailwind CSS', 'LocalStorage'],
-    demoLink: '/todos', // Vercelなどで公開したURLに置き換えてください
-    points: [
-      '筋トレ継続を支援するため、全身に効く3種目（スクワット・ベンチプレス・ラットプルダウン）を自動で再表示',
-      'ユーザーが自由に補助種目を追加・完了・削除可能な柔軟な設計',
-      'ローカルストレージによるトレーニングデータの永続保存',
-      'Tailwind CSSを使ったシンプルかつ直感的なUIで、モバイルからの使用も想定',
-    ],
-  },
+//   {
+//     id: 'todo-app',
+//     title: '筋トレ習慣化Todoリストアプリ（自主制作）',
+//     description:
+//       '筋トレ初心者でも習慣化しやすいように設計されたTodo管理アプリです。ReactとNext.jsで構築し、最低限必要なトレーニング3種目を毎回初期表示。完了後に再表示される仕組みによって継続をサポートします。ブラウザのローカルストレージを使用し、データを永続化しています。',
+//     image: '/images/todo-app-thumbnail.png',
+//     technologies: ['React', 'Next.js', 'TypeScript', 'HTML', 'Tailwind CSS', 'LocalStorage'],
+//     demoLink: '/todos',
+//     points: [
+//       '筋トレ継続を支援するため、全身に効く3種目（スクワット・ベンチプレス・ラットプルダウン）を自動で再表示',
+//       'ユーザーが自由に補助種目を追加・完了・削除可能な柔軟な設計',
+//       'ローカルストレージによるトレーニングデータの永続保存',
+//       'Tailwind CSSを使ったシンプルかつ直感的なUIで、モバイルからの使用も想定',
+//     ],
+//   },
 //   {
 //     id: 'calendar-app', 
 //     title: '筋トレ記録カレンダー (自主制作)',
