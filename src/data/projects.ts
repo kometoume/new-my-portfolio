@@ -93,7 +93,7 @@ export const projects: Project[] = [
     image: '/images/todo-thumbnail.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'LocalStorage'],
     demoLink: 'https://my-todos-michieyagis-projects.vercel.app/',
-    githubLink: 'https://my-todos-michieyagis-projects.vercel.app/',
+    githubLink: 'https://github.com/kometoume/MyTodos',
     points: [
       '毎日行うべき「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示',
       'ユーザーが自由にタスクを追加・完了・削除可能な柔軟な設計',
