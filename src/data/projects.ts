@@ -84,6 +84,26 @@ export const projects: Project[] = [
       '図版作成',
     ],
   },
+
+  {
+    id: 'todo-app',
+    title: '毎日掃除リスト（自主制作）',
+    description:
+      '毎日行うべき「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを管理するTodoアプリです。JavaScriptとブラウザのローカルストレージを使用しています。全てのタスクを完了すると、これらの3つのタスクが自動的に再表示され、日々の習慣化をサポートします。',
+    image: '/images/todo-thumbnail.png',
+    technologies: ['JavaScript', 'HTML', 'CSS', 'LocalStorage'],
+    demoLink: 'https://my-todos-michieyagis-projects.vercel.app/',
+    githubLink: 'https://my-todos-michieyagis-projects.vercel.app/',
+    points: [
+      '毎日行うべき「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示',
+      'ユーザーが自由にタスクを追加・完了・削除可能な柔軟な設計',
+      'ローカルストレージによるトレーニングデータの永続保存',
+    ],
+  },
+
+
+
+
 //   {
 //     id: 'todo-app',
 //     title: '筋トレ習慣化Todoリストアプリ（自主制作）',
