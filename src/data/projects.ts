@@ -92,7 +92,7 @@ export const projects: Project[] = [
       '毎日行うべき「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを管理するTodoアプリです。JavaScriptとブラウザのローカルストレージを使用しています。全てのタスクを完了すると、これらの3つのタスクが自動的に再表示され、日々の習慣化をサポートします。',
     image: '/images/todo-thumbnail.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'LocalStorage'],
-    demoLink: 'https://my-todos-michieyagis-projects.vercel.app/',
+    demoLink: 'https://kometoume.github.io/MyTodos/',
     githubLink: 'https://github.com/kometoume/MyTodos',
     points: [
       '毎日行うべき「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示',

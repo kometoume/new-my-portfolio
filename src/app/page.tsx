@@ -195,16 +195,16 @@ export default function Home() {
                     Webサイト
                   </a>
                 )}
-                {/* {project.githubLink && (
+                {project.githubLink && (
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors duration-300 text-sm"
+                    className="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-gray-600 transition-colors duration-300 text-base font-semibold"
                   >
                     GitHub
                   </a>
-                )} */}
+                )}
               </div>
             </div>
           ))}
