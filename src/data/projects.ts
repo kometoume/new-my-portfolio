@@ -89,18 +89,32 @@ export const projects: Project[] = [
     id: 'todo-app',
     title: '毎日掃除リスト（自主制作）',
     description:
-      '毎日行う3種類のタスクを管理するTodoアプリです。JavaScriptとブラウザのローカルストレージを使用しています。全てのタスクを完了すると、これらの3つのタスクが自動的に再表示され、日々の習慣化をサポートします。',
+      '毎日行う3種類のタスクを管理するTodoアプリです。JavaScriptとFirebaseを使用しており、タスクデータがクラウド上にリアルタイムで保存・同期されます。全てのタスクを完了すると、これらの3つのタスクが自動的に再表示され、日々の習慣化をサポートします。',
     image: '/images/todo-thumbnail.png',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'LocalStorage'],
+    technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
     demoLink: 'https://kometoume.github.io/MyTodos/',
     githubLink: 'https://github.com/kometoume/MyTodos',
     points: [
       '毎日行う「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示',
       'ユーザーが自由にタスクを追加・完了・削除可能な柔軟な設計',
-      'ローカルストレージによるデータの永続保存',
+      'Firebaseによるクラウド上でのデータ永続化とリアルタイム同期',
     ],
   },
-
+//   {
+//     id: 'memo-app',
+//     title: 'メモ帳（自主制作）',
+//     description:
+//       '毎日行う3種類のタスクを管理するTodoアプリです。JavaScriptとブラウザのローカルストレージを使用しています。全てのタスクを完了すると、これらの3つのタスクが自動的に再表示され、日々の習慣化をサポートします。',
+//     image: '/images/todo-memo-thumbnail.png',
+//     technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase', 'Firestore'],
+//     demoLink: 'https://kometoume.github.io/MyMemoApp/',
+//     githubLink: 'https://github.com/kometoume/MyMemoApp',
+//     points: [
+//       'Firebase（Firestore）を使用してデータをクラウド保存',
+//       'ユーザーが自由にタスクを追加・完了・削除可能な柔軟な設計',
+//       'ローカルストレージによるデータの永続保存',
+//     ],
+//   },
 
 
 
