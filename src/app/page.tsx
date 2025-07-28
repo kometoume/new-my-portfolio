@@ -181,7 +181,7 @@ export default function Home() {
               <p className="text-gray-700 font-medium mb-3">ポイント:</p>
               <ul className="list-disc list-inside text-gray-600 text-sm mb-4">
                 {project.points.map((point, index) => (
-                  <li key={index}>{point}</li>
+                  <li key={index} className="hanging-indent">{point}</li>
                 ))}
               </ul>
               <div className="mt-auto flex gap-2 justify-center"> {/* justify-center を追加 */}

@@ -89,7 +89,7 @@ export const projects: Project[] = [
     id: 'todo-app',
     title: '毎日掃除リスト（自主制作）',
     description:
-      '日々の習慣化をサポートするTodoアプリです。**Firebase Authenticationによるユーザー認証機能を実装し、メールアドレスでのログイン・新規登録に加え、手軽なゲストログインにも対応しています。** タスクデータはFirebase Firestoreにユーザーごとにセキュアに保存され、クラウド上でリアルタイムに同期されます。毎日行う3種類のタスクが自動で再表示される機能により、継続的なタスク管理を支援します。',
+      '日々の習慣化をサポートするTodoアプリです。Firebase Authenticationによるユーザー認証機能を実装し、メールアドレスでのログイン・新規登録に加え、手軽なゲストログインにも対応しています。タスクデータはFirebase Firestoreにユーザーごとにセキュアに保存され、クラウド上でリアルタイムに同期されます。毎日行う3種類のタスクが自動で再表示される機能により、継続的なタスク管理を支援します。',
     image: '/images/todo-thumbnail.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
     demoLink: 'https://kometoume.github.io/MyTodos/',
