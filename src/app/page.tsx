@@ -173,8 +173,8 @@ export default function Home() {
             </li>
             <li className="p-4 rounded-lg shadow bg-white">
               Node.js{" "}
-              <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
-                3ヶ月
+              <span className="inline-block bg-blue-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
+                1ヶ月
               </span>{" "}
               {/* 3ヶ月: オレンジ */}
             </li>
