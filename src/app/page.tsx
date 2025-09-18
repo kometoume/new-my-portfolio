@@ -2,11 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { projects, Project } from "../data/projects"; // data/projects.ts からインポート
-import ContactForm from "../components/ContactForm"; // ContactForm をインポート
-import type { Metadata } from "next"; // ★この行を追加★
+import { projects, Project } from "../data/projects";
+import ContactForm from "../components/ContactForm";
+import type { Metadata } from "next";
 
-// ★ここにメタデータのエクスポートを貼り付けます★
 export const metadata: Metadata = {
   title: "Michie Yagi Portfolio", // ブラウザのタブに表示されるタイトル
   description:
@@ -65,7 +64,7 @@ export default function Home() {
           */}
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              はじめまして。八木美智惠と申します。大学院修了後、美術教員および教育機関の助手として教育現場で経験を積んだ後、職業訓練校でWebデザインの知識を習得しました。その後、正社員のWebデザイナー・コーダーとして5年間、フルリモート環境下で業務に従事し、自己管理能力を高めながら円滑なコミュニケーションを心がけてきました。現在はプログラマーとして勤務しており、フロントエンドとバックエンドの両方を幅広く習得しています。ReactやVue.jsを使った新規テンプレート制作を行い、GitHubを活用したチーム開発の流れも理解しています。
+              はじめまして。八木美智惠と申します。大学院修了後、美術教員および教育機関の助手として教育現場で経験を積んだ後、職業訓練校でWebデザインの知識を習得しました。その後、正社員のWebデザイナー・コーダーとして5年間、フルリモート環境下で業務に従事し、自己管理能力を高めながら円滑なコミュニケーションを心がけてきました。現在はプログラマーとして勤務しており、フロントエンドとバックエンドの両方を幅広く習得しています。ReactやVue.jsを使った新規テンプレート制作を行い、GitHubを活用したチーム開発に取り組んでいます。
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               スキルの幅を広げつつ、デザインから開発まで一貫して携わることで、より柔軟でクリエイティブな仕事ができるよう成長していきたいと考えています。
@@ -74,7 +73,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold text-gray-700 mt-8 mb-4">
               これまでの経験
             </h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
+            <ul className="list-disc list-inside text-gray-600 space-y-2 hanging-indent">
               <li>大学院修了後、美術教員として教育現場で経験を積む</li>
               <li>教育機関の助手として教育現場での経験</li>
               <li>職業訓練校でWebデザインの知識を習得</li>
@@ -87,8 +86,10 @@ export default function Home() {
             <h3 className="text-2xl font-semibold text-gray-700 mt-8 mb-4">
               学習中の技術・今後の目標
             </h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>さらなる専門性の向上とスキルアップを目指して転職を検討中</li>
+            <ul className="list-disc list-inside text-gray-600 space-y-2 hanging-indent">
+              <li>
+                現在はプログラマーとして勤務していますが、コーダーやデザイナーとしてWeb制作の現場に再び携わりたいと考えています。特に、デザインとコーディングの一貫したスキルセットを活かして、より高いクオリティのWebサイトの制作に貢献したいと思っています。
+              </li>
             </ul>
           </div>
         </div>
@@ -114,28 +115,31 @@ export default function Home() {
               <span className="inline-block bg-orange-600 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
                 5年
               </span>{" "}
-              {/* 5年: 青 */}
             </li>
             <li className="p-4 rounded-lg shadow bg-white">
               React / Next.js{" "}
               <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
                 3ヶ月
               </span>{" "}
-              {/* 3ヶ月: オレンジ */}
             </li>
-            <li className="p-4 rounded-lg shadow bg-white">
-              Tailwind CSS{" "}
-              <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
-                3ヶ月
-              </span>{" "}
-              {/* 3ヶ月: オレンジ */}
-            </li>
+
             <li className="p-4 rounded-lg shadow bg-white">
               TypeScript{" "}
               <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
                 3ヶ月
               </span>{" "}
-              {/* 3ヶ月: オレンジ */}
+            </li>
+            <li className="p-4 rounded-lg shadow bg-white">
+              Vue.js{" "}
+              <span className="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
+                3ヶ月
+              </span>{" "}
+            </li>
+            <li className="p-4 rounded-lg shadow bg-white">
+              Sass{" "}
+              <span className="inline-block bg-blue-400 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
+                1ヶ月
+              </span>{" "}
             </li>
           </ul>
         </div>
@@ -146,7 +150,7 @@ export default function Home() {
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <li className="p-4 rounded-lg shadow bg-white">
               WordPress{" "}
-              <span className="inline-block bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
+              <span className="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full ml-2">
                 1年
               </span>{" "}
               {/* 2年: 緑 */}
