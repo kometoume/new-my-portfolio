@@ -18,7 +18,7 @@ export const projects: Project[] = [
     id: "zunda_web",
     title: "【仙台名物】ずんだ餅専門店Webサイト（自主制作）",
     description:
-      "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のEC向けブランドサイトです。和の雰囲気を重視しつつ、構築しました。",
+      "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のWebサイトです。和の雰囲気を重視しつつ作成しました。",
     image: "/images/zunda-thumbnail.png",
     technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
     demoLink: "https://kometoume.github.io/zunda_site/",
