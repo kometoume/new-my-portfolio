@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, FormEvent } from 'react';
-import './TodoApp.css';
 interface Todo {
   id: number;
   title: string;
