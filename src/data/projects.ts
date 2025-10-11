@@ -20,7 +20,7 @@ export const projects: Project[] = [
     description:
       "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のEC向けブランドサイトです。和の雰囲気を重視しつつ、構築しました。",
     image: "/images/zunda-thumbnail.png",
-    technologies: ["JavaScript", "HTML", "CSS", "Tailwind CSS"],
+    technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
     demoLink: "https://kometoume.github.io/zunda_site/",
     points: [
       "Google Fontsで和風フォントを選定し、商品名や見出しに伝統的な和菓子の雰囲気と高級感を演出。",
