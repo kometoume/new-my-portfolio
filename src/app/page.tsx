@@ -19,7 +19,6 @@ export default function Home() {
       <section
         id="home"
         className="container mx-auto px-4 py-20 text-center 
-            // 変更点: bg-gray-50 を削除し、グラデーションクラスを追加
             bg-gradient-to-r from-pink-500 to-indigo-500 text-white"
       >
         <h1 className="text-5xl font-extrabold text-white mb-4">
@@ -48,7 +47,17 @@ export default function Home() {
         id="about"
         className="container mx-auto px-4 py-16 bg-white  border-gray-200"
       >
-        <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+        <h2
+          className="
+            text-4xl font-bold mb-8 text-center
+            
+            // ★ 文字グラデーション用の3つのキー設定 ★
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r from-purple-600 to-cyan-500
+            
+          "
+        >
           About Me
         </h2>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -98,11 +107,22 @@ export default function Home() {
       </section>
 
       {/* Skills セクション */}
-      <section
-        id="skills"
-        className="container mx-auto px-4 py-16 bg-gray-50  border-gray-200"
-      >
-        <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+    <section
+    id="skills"
+    className="
+             container mx-auto px-4 py-16 border-gray-200
+             bg-gradient-to-r from-pink-50/50 to-indigo-50/50 // 薄いグラデーション
+        "
+   >
+        <h2 
+          className="
+            text-4xl font-bold mb-8 text-center
+            // ★ 文字グラデーション追加 ★
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r from-purple-600 to-cyan-500
+          "
+        >
           Skills
         </h2>
 
@@ -234,7 +254,15 @@ export default function Home() {
         id="projects"
         className="container mx-auto px-4 py-16 bg-white  border-gray-200"
       >
-        <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+        <h2 
+          className="
+            text-4xl font-bold mb-8 text-center
+            // ★ 文字グラデーション追加 ★
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r from-purple-600 to-cyan-500
+          "
+        >
           Projects
         </h2>
 
@@ -244,10 +272,18 @@ export default function Home() {
             (
               project: Project // Project 型を明示的に指定
             ) => (
-              <div
-                key={project.id}
-                className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
-              >
+       <div
+        key={project.id}
+        className="
+                    p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full 
+                    
+                    // ★ 薄いグラデーションを適用 ★
+                    bg-gradient-to-r from-pink-50/50 to-indigo-50/50 
+                    
+                    // ホバー時に少しグラデーションを強める (オプション)
+                    hover:from-pink-100/60 hover:to-indigo-100/60
+                "
+       >
                 {project.image && ( // 画像がある場合のみ表示
                   <div
                     className="mb-4 relative overflow-hidden rounded-md"
@@ -318,9 +354,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact セクション (仮の内容) */}
-      <section id="contact" className="container mx-auto px-4 py-16 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+   <section 
+      id="contact" 
+      className="
+            container mx-auto px-4 py-16 
+            bg-gradient-to-r from-pink-50/50 to-indigo-50/50 // 薄いグラデーション
+        "
+   >        <h2 
+          className="
+            text-4xl font-bold mb-8 text-center
+            // ★ 文字グラデーション追加 ★
+            bg-clip-text
+            text-transparent
+            bg-gradient-to-r from-purple-600 to-cyan-500
+          "
+        >
           Contact
         </h2>
         <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">

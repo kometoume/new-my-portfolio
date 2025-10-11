@@ -38,12 +38,12 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50 bg-white shadow-md py-4 transition-all duration-300">
       <div className="container mx-auto flex justify-between items-center px-4">
-        {/* サイトタイトル/ロゴ */}
-        {/* ★この Link コンポーネントを修正します★ */}
         <Link
           href="#home"
           onClick={(e) => handleLinkClick(e, '#home')}
-          className="text-2xl font-bold text-gray-800"
+          className="text-2xl font-bold bg-clip-text 
+                text-transparent 
+                bg-gradient-to-r from-purple-600 to-cyan-500"
         >
           Michie Yagi Portfolio
         </Link>
