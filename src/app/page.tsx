@@ -18,13 +18,15 @@ export default function Home() {
       {/* Home / トップセクション */}
       <section
         id="home"
-        className="container mx-auto px-4 py-20 text-center bg-gray-50"
+        className="container mx-auto px-4 py-20 text-center 
+            // 変更点: bg-gray-50 を削除し、グラデーションクラスを追加
+            bg-gradient-to-r from-pink-500 to-indigo-500 text-white"
       >
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
+        <h1 className="text-5xl font-extrabold text-white mb-4">
           Michie Yagi
           <br className="block sm:hidden" /> Portfolio
         </h1>
-        <p className="mt-6 text-lg text-gray-600">
+        <p className="mt-6 text-lg text-white">
           Michie Yagiのポートフォリオサイトです。
         </p>
         {/* 必要であれば、ここにプロフィール画像やアピール画像を追加 */}
