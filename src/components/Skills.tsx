@@ -226,7 +226,7 @@ const Skills = () => {
               <h3
                 className="
         text-2xl font-bold mb-6 
-        text-gray-800 dark:text-gray-200 
+        text-gray-800
                 // inline-flex: テキストの幅にh3の幅を合わせる
         inline-flex relative pb-2 items-center
                 // before: 擬似要素を使って文字の長さに合わせたグラデーション下線を作成
@@ -250,7 +250,7 @@ const Skills = () => {
                       className={`
            p-5 flex flex-col items-start justify-between 
            rounded-xl shadow-lg 
-           bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200
+           bg-white  text-gray-800 
 
           `}
                     >

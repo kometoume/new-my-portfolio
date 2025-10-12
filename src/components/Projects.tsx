@@ -32,8 +32,8 @@ const Projects = () => {
 p-5 // ★ 内側の余白 ★
         flex flex-col h-full 
         rounded-xl shadow-lg 
-        bg-white dark:bg-gray-800 
-        text-gray-800 dark:text-gray-200 
+        bg-white
+        text-gray-800 
         
         // Skillsカードのボーダー設定
         border-2 border-transparent 
@@ -69,10 +69,10 @@ p-5 // ★ 内側の余白 ★
                     key={index}
                     className="
                       // ★★★ インディゴ系の半透明背景に修正 ★★★
-                      bg-indigo-100/80 dark:bg-indigo-900/50 backdrop-blur-sm 
+                      bg-indigo-100/80  backdrop-blur-sm 
                       
                       // ★★★ インディゴ系の文字色に修正 ★★★
-                      text-indigo-700 dark:text-indigo-300
+                      text-indigo-700 
                       
                       text-xs font-semibold 
                       px-2.5 py-0.5 rounded-full 
