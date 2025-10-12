@@ -13,7 +13,7 @@ const Projects = () => {
             // ★ 文字グラデーション追加 ★
             bg-clip-text
             text-transparent
-            bg-gradient-to-r from-cyan-600 to-purple-500
+            bg-gradient-to-r from-sky-500 to-fuchsia-500
           "
       >
         Projects
@@ -38,7 +38,6 @@ p-5 // ★ 内側の余白 ★
         // Skillsカードのボーダー設定
         border-2 border-transparent 
         transition-all duration-300 ease-in-out 
-        cursor-pointer group 
 
                       "
             >
@@ -62,15 +61,28 @@ p-5 // ★ 内側の余白 ★
               </h3>
               <p className="text-gray-600 mb-4 text-sm flex-grow">
                 {project.description}
-              </p>{" "}
+              </p>
               {/* flex-grow で高さを揃える */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                    className="
+                      // ★★★ インディゴ系の半透明背景に修正 ★★★
+                      bg-indigo-100/80 dark:bg-indigo-900/50 backdrop-blur-sm 
+                      
+                      // ★★★ インディゴ系の文字色に修正 ★★★
+                      text-indigo-700 dark:text-indigo-300
+                      
+                      text-xs font-semibold 
+                      px-2.5 py-0.5 rounded-full 
+                      
+                      // 立体感とホバー効果を維持
+                      shadow-md 
+                      transition duration-200 hover:opacity-90
+                    "
                   >
-                    {tech}
+                    {tech} 
                   </span>
                 ))}
               </div>
@@ -83,14 +95,19 @@ p-5 // ★ 内側の余白 ★
                 ))}
               </ul>
               <div className="mt-auto flex gap-2 justify-center">
-                {" "}
-                {/* justify-center を追加 */}
                 {project.demoLink && (
                   <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-cyan-600 to-purple-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-cyan-700 hover:to-purple-600"
+                    className={`
+                      inline-block
+                      bg-cyan-500 backdrop-blur-sm 
+                      text-white 
+                      px-6 py-2 rounded shadow-lg 
+                      transition-all duration-300 text-base font-semibold 
+                      hover:bg-cyan-200/90 hover:text-cyan-600 hover:shadow-xl
+                    `}
                   >
                     Webサイト
                   </a>
@@ -100,7 +117,19 @@ p-5 // ★ 内側の余白 ★
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-cyan-600 to-purple-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-cyan-700 hover:to-purple-600"
+                    className={`
+                      inline-block
+                      
+                      // ★★★ 通常時: 濃い半透明の背景と白文字 ★★★
+                      bg-purple-500 backdrop-blur-sm 
+                      text-white 
+                      
+                      px-6 py-2 rounded shadow-lg 
+                      transition-all duration-300 text-base font-semibold 
+                      
+                      // ★★★ ホバー時: 薄い背景、濃い文字に変更 ★★★
+                      hover:bg-purple-200/90 hover:text-purple-900 hover:shadow-xl
+                    `}
                   >
                     GitHub
                   </a>

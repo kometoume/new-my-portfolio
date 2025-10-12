@@ -168,15 +168,14 @@ const Skills = () => {
     <section
       id="skills"
       className="
-    px-4 py-16
-    bg-cyan-100/20 backdrop-blur-sm"
+    px-4 py-16 bg-gradient-to-r from-cyan-100/40 to-purple-100/40 backdrop-blur-sm"
     >
       <div className="container mx-auto">
         <h2
           className="
             text-4xl font-bold mb-8 text-center
      bg-clip-text text-transparent
-     bg-gradient-to-r from-fuchsia-500 to-sky-500
+     bg-gradient-to-r from-sky-500 to-fuchsia-500
      tracking-tight
     "
         >
@@ -184,7 +183,6 @@ const Skills = () => {
         </h2>
 
         {skillCategories.map((category) => {
-          // グラデーションのスタイルを定義（Tailwind CSSのクラス）
           const gradientClass =
             "bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-sky-500";
 
@@ -207,15 +205,13 @@ const Skills = () => {
                   y2="0%"
                 >
                   <stop
-                    offset="0%"
-                    style={{ stopColor: "#d946ef", stopOpacity: 1 }}
-                  />{" "}
-                  {/* fuchsia-500 */}
+                    offset="0%" // ★★★ Cyan-500 (#06b6d4) に変更 ★★★
+                    style={{ stopColor: "#06b6d4", stopOpacity: 1 }}
+                  />
                   <stop
-                    offset="100%"
-                    style={{ stopColor: "#0ea5e9", stopOpacity: 1 }}
-                  />{" "}
-                  {/* sky-500 */}
+                    offset="100%" // ★★★ Purple-500 (#a855f7) に変更 ★★★
+                    style={{ stopColor: "#a855f7", stopOpacity: 1 }}
+                  />
                 </linearGradient>
               </defs>
             </svg>
@@ -236,7 +232,7 @@ const Skills = () => {
                 // before: 擬似要素を使って文字の長さに合わせたグラデーション下線を作成
                 before:content-[''] before:absolute before:bottom-0 before:left-0 
                 before:w-full before:h-1 
-                before:bg-gradient-to-r before:from-fuchsia-500 before:to-sky-500
+                before:bg-gradient-to-r before:from-sky-500 before:to-fuchsia-500
        "
               >
                 {/* ★★★ 修正箇所: cloneElementで処理したアイコンを配置 ★★★ */}

@@ -7,7 +7,7 @@ const About = () => {
             // ★ 文字グラデーション用の3つのキー設定 ★
             bg-clip-text
             text-transparent
-            bg-gradient-to-r from-purple-600 to-cyan-500
+            bg-gradient-to-r from-sky-500 to-fuchsia-500
             
           "
       >

@@ -7,7 +7,7 @@ const Contact = () => {
       id="contact"
       className="
           px-4 py-16 
-          bg-cyan-100/20 backdrop-blur-sm
+          bg-gradient-to-r from-cyan-100/40 to-purple-100/40 
       "
     >
       <div className="container mx-auto">
@@ -17,7 +17,7 @@ const Contact = () => {
           // 文字グラデーション設定
           bg-clip-text
           text-transparent
-          bg-gradient-to-r from-purple-600 to-cyan-500
+          bg-gradient-to-r from-sky-500 to-fuchsia-500
         "
         >
           Contact

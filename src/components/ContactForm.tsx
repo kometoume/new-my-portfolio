@@ -144,11 +144,16 @@ export default function ContactForm() {
           <button
             type="submit"
             className={`
-              bg-gradient-to-r from-cyan-600 to-purple-500
-               text-white font-bold py-2 px-4 rounded 
+              // ★★★ 通常時: 濃い紫の背景と白文字 ★★★
+              bg-purple-500 backdrop-blur-sm 
+              text-white font-bold py-2 px-4 rounded 
+              
               focus:outline-none focus:shadow-outline 
-              hover:from-cyan-700 hover:to-purple-600  
-             transition-all duration-300 shadow-lg 
+              
+              // ★★★ ホバー時: 薄い背景、濃い文字に変更 ★★★
+              hover:bg-purple-200/90 hover:text-purple-900 hover:shadow-xl
+              
+              transition-all duration-300 shadow-lg 
               ${
               isSubmitting ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
             }
