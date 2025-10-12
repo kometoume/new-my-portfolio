@@ -46,7 +46,7 @@ export default function Header() {
           onClick={(e) => handleLinkClick(e, "#home")}
           className="text-2xl font-bold bg-clip-text 
                 text-transparent 
-                bg-gradient-to-r from-purple-600 to-cyan-500"
+                bg-gradient-to-r from-cyan-600 to-purple-500"
         >
           Michie Yagi Portfolio
         </Link>

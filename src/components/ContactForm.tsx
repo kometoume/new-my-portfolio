@@ -144,10 +144,10 @@ export default function ContactForm() {
           <button
             type="submit"
             className={`
-              bg-gradient-to-r from-purple-600 to-cyan-500
+              bg-gradient-to-r from-cyan-600 to-purple-500
                text-white font-bold py-2 px-4 rounded 
               focus:outline-none focus:shadow-outline 
-              hover:from-purple-700 hover:to-cyan-600  
+              hover:from-cyan-700 hover:to-purple-600  
              transition-all duration-300 shadow-lg 
               ${
               isSubmitting ? "opacity-50 cursor-not-allowed" : "cursor-pointer"

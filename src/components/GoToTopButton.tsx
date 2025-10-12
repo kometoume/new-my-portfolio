@@ -38,9 +38,9 @@ const GoToTopButton: React.FC = () => {
                 active:scale-95 active:shadow-2xl active:transform-none 
                 
                 // ★ ここからグラデーションのクラスに置き換えます ★
-                bg-gradient-to-r from-purple-500 to-cyan-500 // グラデーション背景
+                bg-gradient-to-r from-cyan-500 to-purple-500 // グラデーション背景
                 text-white                                    // アイコンの色を白に
-                hover:from-purple-600 hover:to-cyan-600       // ホバー時の色
+                hover:from-cyan-600 hover:to-purple-600       // ホバー時の色
                 rounded-lg                                    // 角を丸める（任意）
           "
           aria-label="ページトップへ戻る"

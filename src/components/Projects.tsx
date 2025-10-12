@@ -13,7 +13,7 @@ const Projects = () => {
             // ★ 文字グラデーション追加 ★
             bg-clip-text
             text-transparent
-            bg-gradient-to-r from-purple-600 to-cyan-500
+            bg-gradient-to-r from-cyan-600 to-purple-500
           "
       >
         Projects
@@ -90,7 +90,7 @@ p-5 // ★ 内側の余白 ★
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-purple-700 hover:to-cyan-600"
+                    className="inline-block bg-gradient-to-r from-cyan-600 to-purple-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-cyan-700 hover:to-purple-600"
                   >
                     Webサイト
                   </a>
@@ -100,7 +100,7 @@ p-5 // ★ 内側の余白 ★
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-purple-700 hover:to-cyan-600"
+                    className="inline-block bg-gradient-to-r from-cyan-600 to-purple-500 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 text-base font-semibold hover:from-cyan-700 hover:to-purple-600"
                   >
                     GitHub
                   </a>

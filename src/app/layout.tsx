@@ -22,7 +22,11 @@ export default function RootLayout({
 
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body
+        className={`
+           ${inter.className} 
+         `}
+      >
         {shouldShowHeaderFooter && <Header />}
         <main className="flex-grow pt-[60px] md:pt-[60px]">{children}</main>
         {shouldShowHeaderFooter && <Footer />}
