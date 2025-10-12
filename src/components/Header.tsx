@@ -1,25 +1,28 @@
 // src/components/Header.tsx
 
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
   // ヘッダーの高さを定義 (layout.tsxのpt-[80px]と合わせるか、実測値を使う)
-  const HEADER_HEIGHT = 70; // 例: 80px。あなたのヘッダーの実際の高さに合わせて調整してください
+  const HEADER_HEIGHT = 60; // 例: 80px。あなたのヘッダーの実際の高さに合わせて調整してください
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    href: string
+  ) => {
     e.preventDefault();
     const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
@@ -29,7 +32,7 @@ export default function Header() {
 
       window.scrollTo({
         top: offsetTop,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
       setIsOpen(false); // モバイルメニューを閉じる
     }
@@ -40,7 +43,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center px-4">
         <Link
           href="#home"
-          onClick={(e) => handleLinkClick(e, '#home')}
+          onClick={(e) => handleLinkClick(e, "#home")}
           className="text-2xl font-bold bg-clip-text 
                 text-transparent 
                 bg-gradient-to-r from-purple-600 to-cyan-500"
@@ -68,7 +71,10 @@ export default function Header() {
 
         {/* モバイルメニューボタン */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-2xl focus:outline-none text-gray-800 cursor-pointer">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-2xl focus:outline-none text-gray-800 cursor-pointer"
+          >
             <svg
               className="w-8 h-8"
               fill="none"

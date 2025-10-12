@@ -5,15 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -26,11 +17,12 @@ html {
 
 /* 各セクションのIDに適用する基本的な調整 */
 section[id] {
-  scroll-margin-top: 80px; /* PCでのナビバーの高さに合わせる */
+  scroll-margin-top: 60px; /* PCでのナビバーの高さに合わせる */
 }
 
 /* --- モバイル専用の調整 --- */
-@media (max-width: 767px) { /* Tailwind CSSのデフォルトのmdブレイクポイント(768px)は通常768px以上なので、max-width: 767pxが適切 */
+@media (max-width: 767px) {
+  /* Tailwind CSSのデフォルトのmdブレイクポイント(768px)は通常768px以上なので、max-width: 767pxが適切 */
   section[id] {
     scroll-margin-top: 60px; /* モバイルでのナビバーの高さに合わせる */
   }
