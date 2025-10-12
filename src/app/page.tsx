@@ -5,7 +5,6 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import FadeInWhenVisible from "../components/FadeInWhenVisible";
 
 export const metadata: Metadata = {
   title: "Michie Yagi Portfolio",
@@ -18,25 +17,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <HomeSection />
 
-      {/* Aboutセクションをラップ */}
-      <FadeInWhenVisible>
-        <About />
-      </FadeInWhenVisible>
+      <About />
 
-      {/* Skillsセクションをラップ */}
-      <FadeInWhenVisible>
-        <Skills />
-      </FadeInWhenVisible>
+      <Skills />
 
-      {/* Projectsセクションをラップ */}
-      <FadeInWhenVisible>
-        <Projects />
-      </FadeInWhenVisible>
+      <Projects />
 
-      {/* Contactセクションをラップ */}
-      <FadeInWhenVisible>
-        <Contact />
-      </FadeInWhenVisible>
+      <Contact />
     </div>
   );
 }
