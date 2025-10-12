@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import GoToTopButton from "../components/GoToTopButton";
 import { usePathname } from "next/navigation";
-
+import ButterflyBackground from "../components/ButterflyBackground";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
            ${inter.className} 
          `}
       >
+        <ButterflyBackground />
         {shouldShowHeaderFooter && <Header />}
         <main className="flex-grow pt-[60px] md:pt-[60px]">{children}</main>
         {shouldShowHeaderFooter && <Footer />}
