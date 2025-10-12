@@ -104,7 +104,8 @@ export default function Header() {
 
       {/* モバイルメニュー (開閉式) */}
       {isOpen && (
-        <nav className="md:hidden bg-white shadow-lg py-4 transition-all duration-300">
+        <nav className="md:hidden bg-white **/** py-4 transition-all duration-300">
+          {" "}
           <ul className="flex flex-col items-center space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>

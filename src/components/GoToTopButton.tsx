@@ -38,7 +38,7 @@ const GoToTopButton: React.FC = () => {
                 active:scale-95 active:shadow-2xl active:transform-none 
                 
                 // ★ ここからグラデーションのクラスに置き換えます ★
-                bg-gradient-to-r from-cyan-500 to-purple-500 // グラデーション背景
+                bg-gradient-to-r from-cyan-500/80 to-purple-500/80 // グラデーション背景
                 text-white                                    // アイコンの色を白に
                 hover:from-cyan-600 hover:to-purple-600       // ホバー時の色
                 rounded-lg                                    // 角を丸める（任意）
