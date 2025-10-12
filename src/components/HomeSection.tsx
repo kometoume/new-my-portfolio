@@ -1,9 +1,12 @@
-"use client";
+"use client"; // ★アニメーション（インタラクティブな機能）を使用するため追加★
 
 import React from "react";
 import { motion } from "framer-motion";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
+// ★修正: tsparticles からではなく、@tsparticles/engine から型をインポート★
+// （通常、tsparticles v3以降の環境ではこのパスが正しい）
+import type { MoveDirection, OutMode } from "@tsparticles/engine";
 
 const HomeSection = () => {
   const [init, setInit] = React.useState(false);
@@ -17,49 +20,51 @@ const HomeSection = () => {
   }, []);
 
   const particlesOptions = {
+    // フルスクリーン表示を無効化
+    fullScreen: {
+      enable: false,
+    },
     background: {
-      // 背景色はCSSのグラデーションに任せるので透明に
       color: { value: "transparent" },
     },
     particles: {
       number: {
-        // ★星の数を大幅に増やす★
         value: 200,
       },
       color: {
-        // 星の色を白に固定
         value: "#FFFFFF",
       },
       shape: {
         type: "circle" as const,
       },
       opacity: {
-        value: { min: 0.5, max: 1 }, // ★不規則な明るさに調整★
+        value: { min: 0.5, max: 1 },
         anim: {
           enable: true,
-          speed: 1, // ★点滅速度を少し速く★
-          opacity_min: 0.1, // より暗くなる星も
+          speed: 1,
+          opacity_min: 0.1,
           sync: false,
         },
       },
       size: {
-        value: { min: 0.5, max: 1.5 }, // ★星の大きさを少し小さく集中★
+        value: { min: 0.5, max: 1.5 },
       },
       links: {
-        enable: false, // 星と星を繋ぐ線を無効化（星空っぽく）
+        enable: false,
       },
       move: {
-        // ★より動いているように設定★
-        direction: "none" as const, // 全体的な方向は無し
+        // ★修正: 型をインポートし、as const ではなく as MoveDirection を使用★
+        direction: "none" as MoveDirection,
         enable: true,
-        random: true, // ランダムな方向へ動く
-        speed: 0.3, // ★動きの速度を上げる (0.15 -> 0.3)★
+        random: true,
+        speed: 0.3,
         straight: false,
         outModes: {
-          default: "out" as const,
+          // ★修正: 型をインポートし、as const ではなく as OutMode を使用★
+          default: "out" as OutMode,
         },
         attract: {
-          enable: true, // 星が引き合うような動き
+          enable: true,
           rotateX: 600,
           rotateY: 1200,
         },
@@ -67,34 +72,21 @@ const HomeSection = () => {
     },
     interactivity: {
       events: {
-        onHover: {
-          enable: true, // マウスホバーでインタラクション
-          mode: "repulse", // マウスが近づくと星が反発
-        },
-        onClick: {
-          enable: true, // クリックでインタラクション
-          mode: "push", // クリックで星が増える
-        },
+        onHover: { enable: true, mode: "repulse" as const },
+        onClick: { enable: true, mode: "push" as const },
       },
       modes: {
         repulse: { distance: 100, duration: 0.4 },
         push: { quantity: 4 },
       },
     },
-    // ★FPSを上げてより滑らかに（オプション）★
     fpsLimit: 120,
   };
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -110,10 +102,10 @@ const HomeSection = () => {
       className="relative flex items-center justify-center 
                        min-h-[400px] text-center text-white overflow-hidden"
     >
-      {/* 1. ★背景レイヤー (より暗いグラデーション)★ */}
+      {/* 1. 背景レイヤー (暗いグラデーション) */}
       <div
         className="absolute inset-0 z-0 
-                           bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900" // ★色を暗く★
+                           bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900"
       />
 
       {/* 2. tsparticlesによる星空レイヤー */}
