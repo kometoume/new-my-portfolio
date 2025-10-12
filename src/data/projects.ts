@@ -16,9 +16,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "zunda_web",
-    title: "【仙台名物】ずんだ餅専門店Webサイト（自主制作）",
+    title: "ずんだ餅専門店Webサイト（自主制作）",
     description:
-      "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のWebサイトです。和の雰囲気を重視しつつ作成しました。",
+      "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のWebサイトです。和の雰囲気を重視しつつ、ターゲットである観光客にとって「分かりやすさ」と「利便性」を追求して作成しました。",
     image: "/images/zunda-thumbnail.png",
     technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
     demoLink: "https://kometoume.github.io/zunda_site/",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     id: "todo-app",
-    title: "Daily Task（自主制作）",
+    title: "Daily Taskアプリ（自主制作）",
     description:
       "日々の習慣化をサポートするTodoアプリです。Firebase Authenticationによるユーザー認証機能を実装し、メールアドレスでのログイン・新規登録に加え、手軽なゲストログインにも対応しています。タスクデータはFirebase Firestoreにユーザーごとにセキュアに保存され、クラウド上でリアルタイムに同期されます。毎日行う3種類のタスクが自動で再表示される機能により、継続的なタスク管理を支援します。",
     image: "/images/todo-thumbnail.png",
@@ -43,6 +43,7 @@ export const projects: Project[] = [
       "ログインユーザーごとに独立したタスクデータをFirestoreに保存・管理。",
       "毎日行う「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示",
       "Firebase FirestoreのonSnapshot機能を活用し、複数デバイス間でのタスクデータのリアルタイム同期を実現。",
+      "ゴミ箱アイコン（削除）や人のアイコン（ユーザー認証）など、直感的な操作を可能にする標準的なピクトグラムを効果的に配置。",
     ],
   },
   {
