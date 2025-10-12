@@ -1,7 +1,5 @@
-
 import Image from "next/image";
 import { projects, Project } from "../data/projects";
-
 
 const Projects = () => {
   return (
@@ -31,13 +29,17 @@ const Projects = () => {
             <div
               key={project.id}
               className="
-                        p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full 
-                        
-                        // ★ 薄いグラデーションを適用 ★
-                        bg-gradient-to-r from-pink-50/50 to-indigo-50/50 
-                        
-                        // ホバー時に少しグラデーションを強める (オプション)
-                        hover:from-pink-100/60 hover:to-indigo-100/60
+p-5 // ★ 内側の余白 ★
+        flex flex-col h-full 
+        rounded-xl shadow-lg 
+        bg-white dark:bg-gray-800 
+        text-gray-800 dark:text-gray-200 
+        
+        // Skillsカードのボーダー設定
+        border-2 border-transparent 
+        transition-all duration-300 ease-in-out 
+        cursor-pointer group 
+
                       "
             >
               {project.image && ( // 画像がある場合のみ表示

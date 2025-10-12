@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section
@@ -8,7 +7,6 @@ const About = () => {
       <h2
         className="
             text-4xl font-bold mb-8 text-center
-            
             // ★ 文字グラデーション用の3つのキー設定 ★
             bg-clip-text
             text-transparent
