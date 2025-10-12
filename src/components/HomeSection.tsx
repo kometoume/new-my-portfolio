@@ -100,7 +100,7 @@ const HomeSection = () => {
     <section
       id="home"
       className="relative flex items-center justify-center 
-                       min-h-[400px] text-center text-white overflow-hidden"
+                       min-h-[300px] text-center text-white overflow-hidden"
     >
       {/* 1. 背景レイヤー (暗いグラデーション) */}
       <div
@@ -129,10 +129,6 @@ const HomeSection = () => {
           Michie Yagi
           <br className="block sm:hidden" /> Portfolio
         </motion.h1>
-
-        <motion.p className="mt-6 text-lg text-white" variants={itemVariants}>
-          Michie Yagiのポートフォリオサイトです。
-        </motion.p>
       </motion.div>
     </section>
   );
