@@ -1,12 +1,11 @@
-// src/components/Header.tsx
-
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState, useRef } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -16,60 +15,72 @@ export default function Header() {
     { name: "Contact", href: "#contact" },
   ];
 
-  // ヘッダーの高さを定義 (layout.tsxのpt-[80px]と合わせるか、実測値を使う)
-  const HEADER_HEIGHT = 60; // 例: 80px。あなたのヘッダーの実際の高さに合わせて調整してください
+  const scrollToSection = (href: string) => {
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement || !headerRef.current) return;
+
+    const headerHeight = headerRef.current.offsetHeight;
+
+    // targetElement のページ上の位置を計算
+    const elementPosition =
+      targetElement.getBoundingClientRect().top + window.scrollY;
+
+    // ヘッダー分を引いた位置にスクロール
+    const scrollPosition = elementPosition - headerHeight;
+
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+  };
 
   const handleLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
     e.preventDefault();
-    const targetId = href.substring(1);
-    const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      const offsetTop = targetElement.offsetTop - HEADER_HEIGHT; // オフセットを適用
+    // モバイルメニューが開いている場合は閉じてからスクロール
+    if (isOpen) {
+      setIsOpen(false);
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-      setIsOpen(false); // モバイルメニューを閉じる
+      // メニューが閉じるレンダー後にスクロールする
+      setTimeout(() => scrollToSection(href), 50);
+    } else {
+      scrollToSection(href);
     }
   };
 
   return (
-    <header className="fixed w-full z-50 bg-white shadow-md py-4 transition-all duration-300">
+    <header
+      ref={headerRef}
+      className="fixed w-full z-50 bg-white shadow-md py-4 transition-all duration-300"
+    >
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link
+        <a
           href="#home"
           onClick={(e) => handleLinkClick(e, "#home")}
-          className="text-2xl font-bold bg-clip-text 
-                text-transparent 
-                bg-gradient-to-r from-cyan-600 to-purple-500"
+          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-purple-500"
         >
           Michie Yagi Portfolio
-        </Link>
+        </a>
 
-        {/* ナビゲーションメニュー (デスクトップ) */}
+        {/* デスクトップメニュー */}
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {navItems.map((item) => (
               <li key={item.name}>
-                {/* ★この Link コンポーネントを修正します★ */}
-                <Link
+                <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                   className="text-lg text-gray-700 hover:text-blue-600 transition-colors duration-300"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
         </nav>
 
-        {/* モバイルメニューボタン */}
+        {/* モバイルボタン */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -88,35 +99,36 @@ export default function Header() {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
-                ></path>
+                />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                />
               )}
             </svg>
           </button>
         </div>
       </div>
 
-      {/* モバイルメニュー (開閉式) */}
+      {/* モバイルメニュー */}
       {isOpen && (
-        <nav className="md:hidden bg-white **/** py-4 transition-all duration-300">
-          {" "}
+        <nav
+          ref={mobileMenuRef}
+          className="md:hidden bg-white py-4 transition-all duration-300"
+        >
           <ul className="flex flex-col items-center space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>
-                {/* ★この Link コンポーネントを修正します★ */}
-                <Link
+                <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="text-lg text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                  className="text-lg text-gray-700 hover:text-blue-600 transition-colors duration-300"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
