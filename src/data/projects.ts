@@ -107,23 +107,7 @@ export const projects: Project[] = [
     demoLink: "https://www.scsk.jp/sp/clubscsk/",
     points: ["レスポンシブデザイン対応", "スライダー導入", "図版作成"],
   },
-  {
-    id: "client-website-scsk-ixia",
-    title: "クライアントのWebサイト (リニューアル)",
-    description:
-      "クライアントのWebサイトにおいて、サイト全体のデザインを一新するリニューアルプロジェクトに携わり、画像制作、実装・導入までを一貫して担当しました。加えて、サイト全体の構成やデザインの見直しを行い、ユーザー動線を最適化しました。",
-    image: "/images/project-c-thumbnail.png",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "jQuery",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-    ],
-    demoLink: "https://www.scsk.jp/sp/ixia/",
-    points: ["レスポンシブデザイン対応", "図版作成"],
-  },
+
   {
     id: "client-website-scsk-pureflow",
     title: "クライアントのWebサイト (構成・デザイン修正)",

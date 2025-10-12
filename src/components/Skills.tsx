@@ -19,6 +19,7 @@ import {
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobepremierepro,
+  SiTailwindcss,
 } from "react-icons/si";
 
 // ----------------------------------------------------
@@ -54,8 +55,14 @@ const skillCategories = [
         icon: <SiVuedotjs className="text-emerald-500" />,
       },
       {
+        name: "Tailwind CSS",
+        months: 3,
+        color: "cyan-500",
+        icon: <SiTailwindcss className="text-cyan-500" />,
+      },
+      {
         name: "Sass",
-        months: 1,
+        months: 2,
         color: "pink-400",
         icon: <SiSass className="text-pink-400" />,
       },

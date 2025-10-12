@@ -68,10 +68,8 @@ p-5 // ★ 内側の余白 ★
                   <span
                     key={index}
                     className="
-                      // ★★★ インディゴ系の半透明背景に修正 ★★★
                       bg-indigo-100/80  backdrop-blur-sm 
                       
-                      // ★★★ インディゴ系の文字色に修正 ★★★
                       text-indigo-700 
                       
                       text-xs font-semibold 
