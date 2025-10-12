@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
   {
     id: "eding-website",
-    title: "前職の会社のWebサイト",
+    title: "コンテンツ制作会社のコーポレートサイト",
     description:
       "前職の会社のWebサイトの制作・改修を担当しました。主にHTML, CSS, JavaScript, jQueryを用いてレスポンシブデザインに対応させ、視覚的な魅力を高めるスライダーを導入しました。バックエンドではPHPを使用してセキュアな問い合わせフォームを実装しています。デザイン面ではAdobe PhotoshopとIllustratorを活用し、サイト全体の品質向上に貢献しました。",
     image: "/images/eding-thumbnail.png",
