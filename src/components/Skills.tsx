@@ -273,7 +273,6 @@ const Skills = () => {
             flex items-center shadow-md 
             transition-transform duration-300
             // Tailwind JITモードでは動的クラスの完全な組み合わせが必要
-            ring-2 ${ring}
            `}
                     >
                       {label}
