@@ -16,7 +16,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "kirakira_music_lp",
-    title: "きらきら音楽教室 LP (ランディングページ)",
+    title: "きらきら音楽教室 LP (自主製作)",
     description:
       "「できた！」が自信になる」をコンセプトに、子供のピアノ教室の無料体験レッスンへの申し込みを促すランディングページです。親御さんの不安を解消し、教室の明るい雰囲気を直感的に伝えるデザインに重点を置きました。",
     image: "/images/kirakira-thumbnail.png",
