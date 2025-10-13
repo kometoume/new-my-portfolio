@@ -24,7 +24,7 @@ export const projects: Project[] = [
     demoLink: "https://kometoume.github.io/piano_web/",
     points: [
       "親しみやすさを追求し、クレヨンで描いたような手書き風のデザイン。",
-      "Google FontsのNikukyuフォントなどを利用し、子供らしい遊び心と優しい雰囲気を演出。",
+      "Google FontsのKosugi Maruを利用し、子供らしい遊び心と優しい雰囲気を演出。",
       "ユーザーの離脱を防ぐため、固定CTAボタンとフォームへの動線をページ上部と下部に設置し、コンバージョンを意識した設計。",
       "親御さんの抱える不安（飽きる、親の負担など）を最初に提示し、それに対して教室の3つの強みで論理的に解決する構成を採用。",
     ],
