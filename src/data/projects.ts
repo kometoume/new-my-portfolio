@@ -15,6 +15,21 @@ export interface Project {
 // プロジェクトデータの配列
 export const projects: Project[] = [
   {
+    id: "kirakira_music_lp",
+    title: "きらきら音楽教室 LP (ランディングページ)",
+    description:
+      "「できた！」が自信になる」をコンセプトに、子供のピアノ教室の無料体験レッスンへの申し込みを促すランディングページです。親御さんの不安を解消し、教室の明るい雰囲気を直感的に伝えるデザインに重点を置きました。",
+    image: "/images/kirakira-thumbnail.png",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Adobe Illustrator"],
+    demoLink: "https://kometoume.github.io/piano_web/",
+    points: [
+      "親しみやすさを追求し、クレヨンで描いたような手書き風のデザイン。",
+      "Google FontsのNikukyuフォントなどを利用し、子供らしい遊び心と優しい雰囲気を演出。",
+      "ユーザーの離脱を防ぐため、固定CTAボタンとフォームへの動線をページ上部と下部に設置し、コンバージョンを意識した設計。",
+      "親御さんの抱える不安（飽きる、親の負担など）を最初に提示し、それに対して教室の3つの強みで論理的に解決する構成を採用。",
+    ],
+  },
+  {
     id: "zunda_web",
     title: "ずんだ餅専門店Webサイト（自主制作）",
     description:

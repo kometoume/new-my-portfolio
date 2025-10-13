@@ -38,7 +38,7 @@ const skillCategories = [
       },
       {
         name: "React / Next.js",
-        months: 3,
+        months: 5,
         color: "sky-500",
         icon: <FaReact className="text-sky-500" />,
       },
@@ -86,7 +86,7 @@ const skillCategories = [
     skills: [
       {
         name: "PHP",
-        months: 24,
+        months: 12,
         color: "indigo-500",
         icon: <SiPhp className="text-indigo-500" />,
       },
