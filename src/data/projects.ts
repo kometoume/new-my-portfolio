@@ -124,21 +124,21 @@ export const projects: Project[] = [
     points: ["レスポンシブデザイン対応", "スライダー導入", "図版作成"],
   },
 
-  {
-    id: "client-website-scsk-pureflow",
-    title: "クライアントのWebサイト (構成・デザイン修正)",
-    description:
-      "クライアントの要望に応じて、サイト全体の構成やデザインの細部を適宜修正し、図版の作成や既存素材の調整なども行いました。視認性や操作性を意識した改善を重ねることで、ユーザー体験の向上に貢献しています。",
-    image: "/images/project-d-thumbnail.png",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "jQuery",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-    ],
-    demoLink: "https://www.scsk.jp/sp/pureflow/index.html",
-    points: ["レスポンシブデザイン対応", "図版作成"],
-  },
+  //   {
+  //     id: "client-website-scsk-pureflow",
+  //     title: "クライアントのWebサイト (構成・デザイン修正)",
+  //     description:
+  //       "クライアントの要望に応じて、サイト全体の構成やデザインの細部を適宜修正し、図版の作成や既存素材の調整なども行いました。視認性や操作性を意識した改善を重ねることで、ユーザー体験の向上に貢献しています。",
+  //     image: "/images/project-d-thumbnail.png",
+  //     technologies: [
+  //       "HTML",
+  //       "CSS",
+  //       "JavaScript",
+  //       "jQuery",
+  //       "Adobe Photoshop",
+  //       "Adobe Illustrator",
+  //     ],
+  //     demoLink: "https://www.scsk.jp/sp/pureflow/index.html",
+  //     points: ["レスポンシブデザイン対応", "図版作成"],
+  //   },
 ];
