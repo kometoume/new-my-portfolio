@@ -59,10 +59,9 @@ p-5 // ★ 内側の余白 ★
               <h3 className="text-xl font-bold text-gray-800 mb-3">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-4 text-sm flex-grow">
+              <p className="text-gray-600 mb-4 text-sm">
                 {project.description}
               </p>
-              {/* flex-grow で高さを揃える */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, index) => (
                   <span
