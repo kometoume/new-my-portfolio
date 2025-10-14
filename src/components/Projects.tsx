@@ -39,8 +39,7 @@ const Projects = () => {
                 transition-all duration-300 ease-in-out 
 
                 // ★ ホバー効果追加 ★
-                hover:shadow-2xl hover:border-sky-500 
-    "
+                hover:shadow-2xl hover:border-sky-500"
             >
               {project.image && ( // 画像がある場合のみ表示
                 <div
