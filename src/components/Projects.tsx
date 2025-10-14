@@ -25,21 +25,22 @@ const Projects = () => {
           (
             project: Project // Project 型を明示的に指定
           ) => (
-            // ProjectCardとして更にコンポーネント化可能ですが、ここではProjects内に含めます
             <div
               key={project.id}
               className="
-p-5 // ★ 内側の余白 ★
-        flex flex-col h-full 
-        rounded-xl shadow-lg 
-        bg-white
-        text-gray-800 
-        
-        // Skillsカードのボーダー設定
-        border-2 border-transparent 
-        transition-all duration-300 ease-in-out 
+                p-5 // ★ 内側の余白 ★
+                flex flex-col h-full // 親要素の高さを合わせ、子要素を縦方向に配置
+                rounded-xl shadow-lg 
+                bg-white
+                text-gray-800 
+                
+                // Skillsカードのボーダー設定
+                border-2 border-transparent 
+                transition-all duration-300 ease-in-out 
 
-                      "
+                // ★ ホバー効果追加 ★
+                hover:shadow-2xl hover:border-sky-500 
+    "
             >
               {project.image && ( // 画像がある場合のみ表示
                 <div
