@@ -119,8 +119,7 @@ export const projects: Project[] = [
     technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
     demoLink: "https://kometoume.github.io/zunda_site/",
     points: [
-      "Illustratorで、ブランドの信念を象徴するハンコ風ロゴを自作し、伝統と信頼感をデザインで表現。",
-      "Google Fontsで和風フォントを選定し、商品名や見出しに伝統的な和菓子の雰囲気と高級感を演出。",
+      "Google Fontsで游明朝のフォントを選定し、商品名や見出しに伝統的な和菓子の雰囲気と高級感を演出。",
       "モバイルフレンドリーなレスポンシブデザインを、Tailwind CSSのユーティリティを活用して実現。",
       "Tailwindのデフォルトカラーを上書きし、カスタムの「ずんだカラー」を定義・適用することで、ブランド独自の配色を一貫して表現。",
     ],
