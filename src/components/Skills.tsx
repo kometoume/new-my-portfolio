@@ -20,6 +20,7 @@ import {
   SiAdobeillustrator,
   SiAdobepremierepro,
   SiTailwindcss,
+  SiFigma,
 } from "react-icons/si";
 
 // ----------------------------------------------------
@@ -131,6 +132,12 @@ const skillCategories = [
         months: 24,
         color: "purple-700",
         icon: <SiAdobepremierepro className="text-purple-700" />,
+      },
+      {
+        name: "Figma",
+        months: 2,
+        color: "purple-700",
+        icon: <SiFigma className="text-indigo-700" />,
       },
     ],
   },
