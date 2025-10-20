@@ -95,6 +95,107 @@ export const projects: Project[] = [
     points: ["レスポンシブデザイン対応", "図版作成"],
   },
   {
+    id: "client-website-scsk-netscout",
+    title: "クライアントのWebサイト (構成・デザイン修正)",
+    description:
+      "クライアントの要望に応じて、サイト全体の構成やデザインの細部を適宜修正し、図版の作成や既存素材の調整なども行いました。視認性や操作性を意識した改善を重ねることで、ユーザー体験の向上に貢献しています。",
+    image: "/images/project-netscout-thumbnail.png",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],
+    demoLink: "https://www.scsk.jp/sp/netscout/index.html",
+    points: ["レスポンシブデザイン対応", "図版作成"],
+  },
+  {
+    id: "client-website-scsk-ixia",
+    title: "クライアントのWebサイト (構成・デザイン修正)",
+    description:
+      "クライアントの要望に応じて、サイト全体の構成やデザインの細部を適宜修正し、図版の作成や既存素材の調整なども行いました。視認性や操作性を意識した改善を重ねることで、ユーザー体験の向上に貢献しています。",
+    image: "/images/project-c-thumbnail.png",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],
+    demoLink: "https://www.scsk.jp/sp/ixia/",
+    points: ["レスポンシブデザイン対応", "図版作成"],
+  },
+  //   {
+  //     id: "client-website-scsk-icewall",
+  //     title: "クライアントのWebサイト (デザイン統一・ページ制作)",
+  //     description:
+  //       "クライアント製品の特徴に合わせて全体のカラーを統一し、要望に応じたデザイン修正を行いました。YouTube動画の埋め込みを含め、ほぼすべてのページを新規制作。図版やアイコンのテイストも揃えることで、統一感のあるビジュアルデザインを実現しました。",
+  //     image: "/images/project-icewall-thumbnail.png",
+  //     technologies: [
+  //       "HTML",
+  //       "CSS",
+  //       "JavaScript",
+  //       "jQuery",
+  //       "Adobe Photoshop",
+  //       "Adobe Illustrator",
+  //     ],
+  //     demoLink: "https://www.scsk.jp/sp/hpe/icewall/index.html",
+  //     points: [
+  //       "全ページの新規制作",
+  //       "製品イメージに合わせたカラー統一",
+  //       "YouTube動画埋め込み",
+  //       "図版・アイコンの統一",
+  //       "デザイン修正対応",
+  //     ],
+  //   },
+  //   {
+  //     id: "client-website-scsk-alletra",
+  //     title: "クライアントのWebサイト (デザイン統一・ページ制作)",
+  //     description:
+  //       "クライアント製品の特徴に合わせて全体のカラーを統一し、要望に応じたデザイン修正を行いました。ほぼすべてのページを新規制作。図版やアイコンのテイストも揃えることで、統一感のあるビジュアルデザインを実現しました。",
+  //     image: "/images/project-alletra-thumbnail.png",
+  //     technologies: [
+  //       "HTML",
+  //       "CSS",
+  //       "JavaScript",
+  //       "jQuery",
+  //       "Adobe Photoshop",
+  //       "Adobe Illustrator",
+  //     ],
+  //     demoLink: "https://www.scsk.jp/sp/hpe/alletra/index.html",
+  //     points: [
+  //       "全ページの新規制作",
+  //       "製品イメージに合わせたカラー統一",
+  //       "図版・アイコンの統一",
+  //       "デザイン修正対応",
+  //     ],
+  //   },
+  {
+    id: "client-website-scsk-hpedx",
+    title: "クライアントのWebサイト (デザイン統一・ページ制作)",
+    description:
+      "クライアント製品の特徴に合わせて全体のカラーを統一し、要望に応じたデザイン修正を行いました。ほぼすべてのページを新規制作。図版やアイコンのテイストも揃えることで、統一感のあるビジュアルデザインを実現しました。",
+    image: "/images/project-hpedx-thumbnail.png",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],
+    demoLink: "https://www.scsk.jp/sp/hpe/hpedx/index.html",
+    points: [
+      "全ページの新規制作",
+      "製品イメージに合わせたカラー統一",
+      "図版・アイコンの統一",
+      "デザイン修正対応",
+    ],
+  },
+  {
     id: "eding-website",
     title: "コンテンツ制作会社のコーポレートサイト",
     description:
