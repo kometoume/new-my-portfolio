@@ -15,25 +15,26 @@ export interface Project {
 // プロジェクトデータの配列
 export const projects: Project[] = [
   {
-    id: "eding-website",
-    title: "コンテンツ制作会社のコーポレートサイト",
+    id: "client-website-scsk-nvidia",
+    title: "クライアントのWebサイト (導入事例、FAQなど)",
     description:
-      "前職の会社のWebサイトの制作・改修を担当しました。主にHTML, CSS, JavaScript, jQueryを用いてレスポンシブデザインに対応させ、視覚的な魅力を高めるスライダーを導入しました。バックエンドではPHPを使用してセキュアな問い合わせフォームを実装しています。デザイン面ではAdobe PhotoshopとIllustratorを活用し、サイト全体の品質向上に貢献しました。",
-    image: "/images/eding-thumbnail.png",
+      "クライアントのWebサイトです。また、導入事例ページの追加やFAQページの設計・開発にも携わり、アコーディオン機能を活用したカテゴリ別の表示や、見やすさ・使いやすさに配慮したUI設計を行いました。",
+    image: "/images/project-e-thumbnail.png",
     technologies: [
       "HTML",
       "CSS",
       "JavaScript",
       "jQuery",
-      "PHP",
       "Adobe Photoshop",
       "Adobe Illustrator",
     ],
-    demoLink: "https://www.eding.co.jp",
+    demoLink: "https://www.scsk.jp/sp/radius/casestudy/index.html",
     points: [
       "レスポンシブデザイン対応",
-      "問い合わせフォーム作成",
       "スライダー導入",
+      "導入事例ページの追加・調整",
+      "FAQページの設計・実装（アコーディオン機能を使用）",
+      "ユーザー導線を意識した情報設計",
     ],
   },
   {
@@ -93,6 +94,28 @@ export const projects: Project[] = [
     demoLink: "https://www.scsk.jp/sp/pureflow/index.html",
     points: ["レスポンシブデザイン対応", "図版作成"],
   },
+  {
+    id: "eding-website",
+    title: "コンテンツ制作会社のコーポレートサイト",
+    description:
+      "前職の会社のWebサイトの制作・改修を担当しました。主にHTML, CSS, JavaScript, jQueryを用いてレスポンシブデザインに対応させ、視覚的な魅力を高めるスライダーを導入しました。バックエンドではPHPを使用してセキュアな問い合わせフォームを実装しています。デザイン面ではAdobe PhotoshopとIllustratorを活用し、サイト全体の品質向上に貢献しました。",
+    image: "/images/eding-thumbnail.png",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+    ],
+    demoLink: "https://www.eding.co.jp",
+    points: [
+      "レスポンシブデザイン対応",
+      "問い合わせフォーム作成",
+      "スライダー導入",
+    ],
+  },
   //   {
   //     id: "kirakira_music_lp",
   //     title: "きらきら音楽教室 LP (自主製作)",
@@ -110,20 +133,20 @@ export const projects: Project[] = [
   //       "親御さんの抱える不安（飽きる、親の負担など）を最初に提示し、それに対して教室の3つの強みで論理的に解決する構成を採用。",
   //     ],
   //   },
-  {
-    id: "zunda_web",
-    title: "ずんだ餅専門店Webサイト（自主制作）",
-    description:
-      "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のWebサイトです。和の雰囲気を重視しつつ、ターゲットである観光客にとって「分かりやすさ」と「利便性」を追求して作成しました。",
-    image: "/images/zunda-thumbnail.png",
-    technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
-    demoLink: "https://kometoume.github.io/zunda_site/",
-    points: [
-      "Google Fontsで游明朝のフォントを選定し、商品名や見出しに伝統的な和菓子の雰囲気と高級感を演出。",
-      "モバイルフレンドリーなレスポンシブデザインを、Tailwind CSSのユーティリティを活用して実現。",
-      "Tailwindのデフォルトカラーを上書きし、カスタムの「ずんだカラー」を定義・適用することで、ブランド独自の配色を一貫して表現。",
-    ],
-  },
+  //   {
+  //     id: "zunda_web",
+  //     title: "ずんだ餅専門店Webサイト（自主制作）",
+  //     description:
+  //       "仙台伝統の味、ずんだ餅の魅力を最大限に伝える架空のWebサイトです。和の雰囲気を重視しつつ、ターゲットである観光客にとって「分かりやすさ」と「利便性」を追求して作成しました。",
+  //     image: "/images/zunda-thumbnail.png",
+  //     technologies: ["HTML", "JavaScript", "CSS", "Tailwind CSS"],
+  //     demoLink: "https://kometoume.github.io/zunda_site/",
+  //     points: [
+  //       "Google Fontsで游明朝のフォントを選定し、商品名や見出しに伝統的な和菓子の雰囲気と高級感を演出。",
+  //       "モバイルフレンドリーなレスポンシブデザインを、Tailwind CSSのユーティリティを活用して実現。",
+  //       "Tailwindのデフォルトカラーを上書きし、カスタムの「ずんだカラー」を定義・適用することで、ブランド独自の配色を一貫して表現。",
+  //     ],
+  //   },
   {
     id: "todo-app",
     title: "Daily Taskアプリ（自主制作）",
