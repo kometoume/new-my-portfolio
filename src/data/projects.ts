@@ -151,7 +151,7 @@ export const projects: Project[] = [
     id: "todo-app",
     title: "Daily Taskアプリ（自主制作）",
     description:
-      "日々の習慣化をサポートするTodoアプリです。Firebase Authenticationによるユーザー認証機能を実装し、メールアドレスでのログイン・新規登録に加え、手軽なゲストログインにも対応しています。タスクデータはFirebase Firestoreにユーザーごとにセキュアに保存され、クラウド上でリアルタイムに同期されます。毎日行う3種類のタスクが自動で再表示される機能により、継続的なタスク管理を支援します。",
+      "日々の習慣化をサポートするTodoアプリです。ユーザーがタスク管理に集中できるよう、手書き風フォントと罫線を採用したレトロなノート風UIに刷新しています。技術面では、Firebase Authenticationによるユーザー認証機能（メール/パスワード、ゲストログイン）を実装し、タスクデータはFirebase Firestoreにユーザーごとにセキュアに保存され、クラウド上でリアルタイムに同期されます。さらに、毎朝「ゴミ出し」「洗濯」「皿洗い」など、継続的な習慣化を支援するための固定タスクが自動で再表示される機能を実装しています。",
     image: "/images/todo-thumbnail.png",
     technologies: ["JavaScript", "HTML", "CSS", "Tailwind CSS", "Firebase"],
     demoLink: "https://kometoume.github.io/MyTodos/",
@@ -161,6 +161,7 @@ export const projects: Project[] = [
       "ログインユーザーごとに独立したタスクデータをFirestoreに保存・管理。",
       "毎日行う「ゴミ出し」「洗濯」「皿洗い」の3種類のタスクを自動で再表示",
       "Firebase FirestoreのonSnapshot機能を活用し、複数デバイス間でのタスクデータのリアルタイム同期を実現。",
+      "「メモ帳/ノート」コンセプトのUIを実装。手書き風の日本語フォント（Yusei Magic）と紙のような背景色を使用し、アナログなタスク管理の親しみやすさを追求。",
       "ゴミ箱アイコン（削除）や人のアイコン（ユーザー認証）など、直感的な操作を可能にする標準的なピクトグラムを効果的に配置。",
     ],
   },
