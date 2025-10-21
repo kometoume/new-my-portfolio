@@ -173,28 +173,28 @@ export const projects: Project[] = [
   //       "デザイン修正対応",
   //     ],
   //   },
-  {
-    id: "client-website-scsk-hpedx",
-    title: "クライアントのWebサイト (デザイン統一・ページ制作)",
-    description:
-      "クライアント製品の特徴に合わせて全体のカラーを統一し、要望に応じたデザイン修正を行いました。ほぼすべてのページを新規制作。図版やアイコンのテイストも揃えることで、統一感のあるビジュアルデザインを実現しました。",
-    image: "/images/project-hpedx-thumbnail.png",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "jQuery",
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-    ],
-    demoLink: "https://www.scsk.jp/sp/hpe/hpedx/index.html",
-    points: [
-      "全ページの新規制作",
-      "製品イメージに合わせたカラー統一",
-      "図版・アイコンの統一",
-      "デザイン修正対応",
-    ],
-  },
+  //   {
+  //     id: "client-website-scsk-hpedx",
+  //     title: "クライアントのWebサイト (デザイン統一・ページ制作)",
+  //     description:
+  //       "クライアント製品の特徴に合わせて全体のカラーを統一し、要望に応じたデザイン修正を行いました。ほぼすべてのページを新規制作。図版やアイコンのテイストも揃えることで、統一感のあるビジュアルデザインを実現しました。",
+  //     image: "/images/project-hpedx-thumbnail.png",
+  //     technologies: [
+  //       "HTML",
+  //       "CSS",
+  //       "JavaScript",
+  //       "jQuery",
+  //       "Adobe Photoshop",
+  //       "Adobe Illustrator",
+  //     ],
+  //     demoLink: "https://www.scsk.jp/sp/hpe/hpedx/index.html",
+  //     points: [
+  //       "全ページの新規制作",
+  //       "製品イメージに合わせたカラー統一",
+  //       "図版・アイコンの統一",
+  //       "デザイン修正対応",
+  //     ],
+  //   },
   {
     id: "eding-website",
     title: "コンテンツ制作会社のコーポレートサイト",
