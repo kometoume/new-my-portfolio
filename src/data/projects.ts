@@ -15,6 +15,19 @@ export interface Project {
 // プロジェクトデータの配列
 export const projects: Project[] = [
   {
+    id: "banner",
+    title: "バナーデザイン一覧",
+    description:
+      "各種Webサイトやキャンペーンで使用されたバナーデザインをまとめたページです。訴求内容や掲載媒体に合わせて、レイアウト・配色・フォント選定を工夫し、目的に応じたビジュアルを制作しました。",
+    image: "/images/project-banner-thumbnail.png",
+    technologies: ["Adobe Photoshop", "Adobe Illustrator"],
+    demoLink: "https://kometoume.github.io/banner_site/",
+    points: [
+      "キャンペーン・新商品告知・イベント用など目的別に制作",
+      "ブランドイメージを損なわず、視覚的に訴求できる構成を意識",
+    ],
+  },
+  {
     id: "client-website-scsk-nvidia",
     title: "クライアントのWebサイト (導入事例、FAQなど)",
     description:
