@@ -15,11 +15,11 @@ export interface Project {
 // プロジェクトデータの配列
 export const projects: Project[] = [
   {
-    id: "banner",
+    id: "design",
     title: "バナーデザイン一覧",
     description:
       "各種Webサイトやキャンペーンで使用されたバナーデザインをまとめたページです。訴求内容や掲載媒体に合わせて、レイアウト・配色・フォント選定を工夫し、目的に応じたビジュアルを制作しました。",
-    image: "/images/project-banner-thumbnail.png",
+    image: "/images/project-design-thumbnail.png",
     technologies: ["Adobe Photoshop", "Adobe Illustrator"],
     demoLink: "https://kometoume.github.io/design_portfolio/",
     points: [
