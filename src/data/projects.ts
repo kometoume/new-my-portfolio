@@ -21,7 +21,7 @@ export const projects: Project[] = [
       "各種Webサイトやキャンペーンで使用されたバナーデザインをまとめたページです。訴求内容や掲載媒体に合わせて、レイアウト・配色・フォント選定を工夫し、目的に応じたビジュアルを制作しました。",
     image: "/images/project-banner-thumbnail.png",
     technologies: ["Adobe Photoshop", "Adobe Illustrator"],
-    demoLink: "https://kometoume.github.io/banner_site/",
+    demoLink: "https://kometoume.github.io/design_portfolio/",
     points: [
       "キャンペーン・新商品告知・イベント用など目的別に制作",
       "ブランドイメージを損なわず、視覚的に訴求できる構成を意識",
