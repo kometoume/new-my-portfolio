@@ -16,15 +16,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "design",
-    title: "バナーデザイン一覧",
+    title: "デザイン一覧",
     description:
-      "各種Webサイトやキャンペーンで使用されたバナーデザインをまとめたページです。訴求内容や掲載媒体に合わせて、レイアウト・配色・フォント選定を工夫し、目的に応じたビジュアルを制作しました。",
+      "架空のキャンペーンを想定して制作したバナーデザインや、Figmaを使ったデザイン練習の途中経過をまとめたページです。レイアウト・配色・フォント選定などの基礎を意識しながら、目的に合わせたビジュアル表現を試みています。",
     image: "/images/project-design-thumbnail.png",
-    technologies: ["Adobe Photoshop", "Adobe Illustrator"],
+    technologies: ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
     demoLink: "https://kometoume.github.io/design_portfolio/",
     points: [
-      "キャンペーン・新商品告知・イベント用など目的別に制作",
-      "ブランドイメージを損なわず、視覚的に訴求できる構成を意識",
+      "架空のキャンペーン・新商品告知・イベント用などを想定して制作",
+      "Figmaを使用したデザイン練習や途中段階のレイアウトも掲載",
+      "ブランドイメージや目的に合わせ、視覚的に訴求できる構成を意識",
     ],
   },
   {
