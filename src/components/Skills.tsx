@@ -9,13 +9,16 @@ import {
   FaCode,
   FaServer,
   FaDatabase,
+  FaBullhorn,
+  FaHashtag,
 } from "react-icons/fa";
 import {
   SiTypescript,
-  SiVuedotjs,
   SiSass,
   SiNodedotjs,
   SiPhp,
+  SiFirebase,
+  SiWix,
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobepremierepro,
@@ -39,21 +42,15 @@ const skillCategories = [
       },
       {
         name: "React / Next.js",
-        months: 5,
+        months: 9,
         color: "sky-500",
         icon: <FaReact className="text-sky-500" />,
       },
       {
         name: "TypeScript",
-        months: 3,
+        months: 6,
         color: "blue-600",
         icon: <SiTypescript className="text-blue-600" />,
-      },
-      {
-        name: "Vue.js",
-        months: 3,
-        color: "emerald-500",
-        icon: <SiVuedotjs className="text-emerald-500" />,
       },
       {
         name: "Tailwind CSS",
@@ -70,7 +67,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "CMS",
+    title: "CMS / Webサイト制作ツール",
     icon: <FaDatabase />,
     skills: [
       {
@@ -78,6 +75,12 @@ const skillCategories = [
         months: 12,
         color: "gray-700",
         icon: <FaWordpressSimple className="text-gray-700" />,
+      },
+      {
+        name: "Wix",
+        months: 7,
+        color: "yellow-500",
+        icon: <SiWix className="text-yellow-500" />,
       },
     ],
   },
@@ -96,6 +99,30 @@ const skillCategories = [
         months: 1,
         color: "green-500",
         icon: <SiNodedotjs className="text-green-500" />,
+      },
+      {
+        name: "Firebase",
+        months: 7,
+        color: "amber-500",
+        icon: <SiFirebase className="text-amber-500" />,
+      },
+    ],
+  },
+  {
+    title: "マーケティング運用",
+    icon: <FaBullhorn />,
+    skills: [
+      {
+        name: "Google広告運用",
+        months: 7,
+        color: "blue-500",
+        icon: <FaBullhorn className="text-blue-500" />,
+      },
+      {
+        name: "SNS運用",
+        months: 7,
+        color: "rose-500",
+        icon: <FaHashtag className="text-rose-500" />,
       },
     ],
   },
