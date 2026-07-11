@@ -42,13 +42,13 @@ const skillCategories = [
       },
       {
         name: "React / Next.js",
-        months: 9,
+        months: 1,
         color: "sky-500",
         icon: <FaReact className="text-sky-500" />,
       },
       {
         name: "TypeScript",
-        months: 6,
+        months: 1,
         color: "blue-600",
         icon: <SiTypescript className="text-blue-600" />,
       },
@@ -60,7 +60,7 @@ const skillCategories = [
       },
       {
         name: "Sass",
-        months: 2,
+        months: 1,
         color: "pink-400",
         icon: <SiSass className="text-pink-400" />,
       },
@@ -102,7 +102,7 @@ const skillCategories = [
       },
       {
         name: "Firebase",
-        months: 7,
+        months: 1,
         color: "amber-500",
         icon: <SiFirebase className="text-amber-500" />,
       },
@@ -162,7 +162,7 @@ const skillCategories = [
       },
       {
         name: "Figma",
-        months: 1,
+        months: 7,
         color: "purple-700",
         icon: <SiFigma className="text-indigo-700" />,
       },
