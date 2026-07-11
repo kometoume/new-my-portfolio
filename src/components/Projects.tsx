@@ -132,6 +132,29 @@ const Projects = () => {
                   </a>
                 )}
               </div>
+              {project.links && project.links.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-2 justify-center">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-block
+                        bg-fuchsia-100/80 backdrop-blur-sm
+                        text-fuchsia-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full
+                        shadow-md
+                        transition duration-200 hover:bg-fuchsia-200
+                      "
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           )
         )}
