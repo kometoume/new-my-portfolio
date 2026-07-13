@@ -2,29 +2,49 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #16161d;
+  --muted: #6b6b76;
+  --line: rgba(0, 0, 0, 0.1);
+  --accent-olive: #333d29;
+  --accent-coral: #e94846;
 }
 
 body {
-  /* background: var(--background); */
+  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
   scroll-behavior: smooth; /* スムーズスクロールを有効にする */
+  background: var(--background);
+}
+
+::selection {
+  background: var(--accent-olive);
+  color: #ffffff;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent-olive), var(--accent-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.font-heading {
+  font-family: var(--font-zen-maru-gothic), var(--font-noto-sans-jp), sans-serif;
 }
 
 /* 各セクションのIDに適用する基本的な調整 */
 section[id] {
-  scroll-margin-top: 60px; /* PCでのナビバーの高さに合わせる */
+  scroll-margin-top: 80px; /* PCでのナビバーの高さに合わせる */
 }
 
 /* --- モバイル専用の調整 --- */
 @media (max-width: 767px) {
   /* Tailwind CSSのデフォルトのmdブレイクポイント(768px)は通常768px以上なので、max-width: 767pxが適切 */
   section[id] {
-    scroll-margin-top: 60px; /* モバイルでのナビバーの高さに合わせる */
+    scroll-margin-top: 80px; /* モバイルでのナビバーの高さに合わせる */
   }
 }
 

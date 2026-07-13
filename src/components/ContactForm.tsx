@@ -75,24 +75,21 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="text-gray-900">
-      <h2 className="text-2xl font-bold mb-4 text-gray-900">お問い合わせ</h2>
+    <div>
       <form id="contactForm" onSubmit={handleSubmit}>
-        <div className="mb-4">
-          {" "}
-          {/* 各入力フィールドをdivで囲むとTailwindのmbが効きやすい */}
+        <div className="mb-8">
           <label
             htmlFor="name"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
           >
-            お名前:
+            お名前
           </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full bg-transparent border-0 border-b border-black/20 py-2 text-[#16161d] placeholder-black/20 focus:outline-none focus:border-[#333d29] transition-colors duration-300"
             onInvalid={(e) =>
               setCustomValidity(e, "お名前を入力してください。")
             }
@@ -100,19 +97,19 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-8">
           <label
             htmlFor="email"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
           >
-            メールアドレス:
+            メールアドレス
           </label>
           <input
             type="email"
             id="email"
             name="email"
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full bg-transparent border-0 border-b border-black/20 py-2 text-[#16161d] placeholder-black/20 focus:outline-none focus:border-[#333d29] transition-colors duration-300"
             onInvalid={(e) =>
               setCustomValidity(e, "有効なメールアドレスを入力してください。")
             }
@@ -120,19 +117,19 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-10">
           <label
             htmlFor="message"
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
           >
-            メッセージ:
+            メッセージ
           </label>
           <textarea
             id="message"
             name="message"
-            rows={5} // 行数を少し増やしました
+            rows={5}
             required
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full bg-transparent border-0 border-b border-black/20 py-2 text-[#16161d] placeholder-black/20 focus:outline-none focus:border-[#333d29] transition-colors duration-300 resize-none"
             onInvalid={(e) =>
               setCustomValidity(e, "メッセージを入力してください。")
             }
@@ -143,32 +140,19 @@ export default function ContactForm() {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className={`
-              // ★★★ 通常時: 濃い紫の背景と白文字 ★★★
-              bg-purple-500 backdrop-blur-sm 
-              text-white font-bold py-2 px-4 rounded 
-              
-              focus:outline-none focus:shadow-outline 
-              
-              // ★★★ ホバー時: 薄い背景、濃い文字に変更 ★★★
-              hover:bg-purple-200/90 hover:text-purple-900 hover:shadow-xl
-              
-              transition-all duration-300 shadow-lg 
-              ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
-            }
-            `}
-            disabled={isSubmitting} // 送信中はボタンを無効化
+            className={`inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#333d29] text-[#333d29] px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white focus:outline-none ${
+              isSubmitting ? "opacity-40 cursor-not-allowed" : "cursor-pointer"
+            }`}
+            disabled={isSubmitting}
           >
-            {isSubmitting ? "送信中..." : "送信"}
+            {isSubmitting ? "送信中..." : "送信する"}
           </button>
         </div>
 
-        {/* 送信メッセージの表示 */}
         {formMessage && (
           <p
-            className={`mt-4 text-center ${
-              isSuccess ? "text-green-600" : "text-red-600"
+            className={`mt-6 text-center text-sm ${
+              isSuccess ? "text-black/60" : "text-red-500"
             }`}
           >
             {formMessage}

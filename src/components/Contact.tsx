@@ -2,30 +2,18 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    // 1. セクション全体（枠組みと背景デザイン）
     <section
       id="contact"
-      className="
-          px-4 py-16 
-          bg-gradient-to-r from-cyan-100/40 to-purple-100/40 
-      "
+      className="px-6 pt-16 pb-28 md:pt-20 md:pb-36 bg-white border-t border-black/10"
     >
       <div className="container mx-auto">
-        <h2
-          className="
-          text-4xl font-bold mb-8 text-center
-          // 文字グラデーション設定
-          bg-clip-text
-          text-transparent
-          bg-gradient-to-r from-sky-500 to-fuchsia-500
-        "
-        >
-          Contact
-        </h2>
+        <div className="flex items-baseline gap-3 mb-16 justify-center md:justify-start max-w-xl mx-auto">
+          <h2 className="font-heading text-2xl font-bold text-[#16161d] tracking-tight">
+            Contact
+          </h2>
+        </div>
 
-        {/* 3. フォームコンポーネントを配置するコンテナ */}
-        <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
-          {/* ★ ContactForm.tsxで定義したフォームのロジックとUIを呼び出し ★ */}
+        <div className="max-w-xl mx-auto">
           <ContactForm />
         </div>
       </div>

@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-// アイコンライブラリ（例: react-icons）から必要なものをインポート
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaHtml5,
@@ -24,11 +26,9 @@ import {
   SiAdobepremierepro,
   SiTailwindcss,
   SiFigma,
+  SiHubspot,
 } from "react-icons/si";
 
-// ----------------------------------------------------
-// 1. スキルデータ（変更なし）
-// ----------------------------------------------------
 const skillCategories = [
   {
     title: "フロントエンド開発",
@@ -37,33 +37,24 @@ const skillCategories = [
       {
         name: "HTML / CSS / JavaScript",
         months: 60,
-        color: "orange-500",
-        icon: <FaHtml5 className="text-orange-600" />,
+        icon: <FaHtml5 className="text-orange-500" />,
       },
       {
         name: "React / Next.js",
         months: 1,
-        color: "sky-500",
-        icon: <FaReact className="text-sky-500" />,
+        icon: <FaReact className="text-sky-400" />,
       },
       {
         name: "TypeScript",
         months: 1,
-        color: "blue-600",
-        icon: <SiTypescript className="text-blue-600" />,
+        icon: <SiTypescript className="text-blue-400" />,
       },
       {
         name: "Tailwind CSS",
         months: 3,
-        color: "cyan-500",
-        icon: <SiTailwindcss className="text-cyan-500" />,
+        icon: <SiTailwindcss className="text-cyan-400" />,
       },
-      {
-        name: "Sass",
-        months: 1,
-        color: "pink-400",
-        icon: <SiSass className="text-pink-400" />,
-      },
+      { name: "Sass", months: 1, icon: <SiSass className="text-pink-400" /> },
     ],
   },
   {
@@ -72,39 +63,26 @@ const skillCategories = [
     skills: [
       {
         name: "WordPress",
-        months: 12,
-        color: "gray-700",
-        icon: <FaWordpressSimple className="text-gray-700" />,
+        months: 3,
+        icon: <FaWordpressSimple className="text-slate-300" />,
       },
-      {
-        name: "Wix",
-        months: 7,
-        color: "yellow-500",
-        icon: <SiWix className="text-yellow-500" />,
-      },
+      { name: "Wix", months: 7, icon: <SiWix className="text-yellow-400" /> },
     ],
   },
   {
     title: "バックエンド開発",
     icon: <FaServer />,
     skills: [
-      {
-        name: "PHP",
-        months: 12,
-        color: "indigo-500",
-        icon: <SiPhp className="text-indigo-500" />,
-      },
+      { name: "PHP", months: 12, icon: <SiPhp className="text-indigo-400" /> },
       {
         name: "Node.js",
         months: 1,
-        color: "green-500",
-        icon: <SiNodedotjs className="text-green-500" />,
+        icon: <SiNodedotjs className="text-green-400" />,
       },
       {
         name: "Firebase",
         months: 1,
-        color: "amber-500",
-        icon: <SiFirebase className="text-amber-500" />,
+        icon: <SiFirebase className="text-amber-400" />,
       },
     ],
   },
@@ -113,16 +91,14 @@ const skillCategories = [
     icon: <FaBullhorn />,
     skills: [
       {
-        name: "Google広告運用",
+        name: "Hubspot",
         months: 7,
-        color: "blue-500",
-        icon: <FaBullhorn className="text-blue-500" />,
+        icon: <SiHubspot className="text-orange-500" />,
       },
       {
         name: "SNS運用",
         months: 7,
-        color: "rose-500",
-        icon: <FaHashtag className="text-rose-500" />,
+        icon: <FaHashtag className="text-rose-400" />,
       },
     ],
   },
@@ -133,8 +109,7 @@ const skillCategories = [
       {
         name: "Git / GitHub",
         months: 3,
-        color: "red-600",
-        icon: <FaGitAlt className="text-red-600" />,
+        icon: <FaGitAlt className="text-orange-500" />,
       },
     ],
   },
@@ -145,183 +120,90 @@ const skillCategories = [
       {
         name: "Adobe Photoshop",
         months: 60,
-        color: "blue-700",
-        icon: <SiAdobephotoshop className="text-blue-700" />,
+        icon: <SiAdobephotoshop className="text-blue-500" />,
       },
       {
         name: "Adobe Illustrator",
         months: 60,
-        color: "orange-700",
-        icon: <SiAdobeillustrator className="text-orange-700" />,
+        icon: <SiAdobeillustrator className="text-orange-400" />,
       },
       {
         name: "Adobe Premiere Pro",
         months: 24,
-        color: "purple-700",
-        icon: <SiAdobepremierepro className="text-purple-700" />,
+        icon: <SiAdobepremierepro className="text-purple-400" />,
       },
-      {
-        name: "Figma",
-        months: 7,
-        color: "purple-700",
-        icon: <SiFigma className="text-indigo-700" />,
-      },
+      { name: "Figma", months: 7, icon: <SiFigma className="text-fuchsia-400" /> },
     ],
   },
 ];
 
-// ----------------------------------------------------
-// 2. ヘルパー関数（変更なし）
-// ----------------------------------------------------
-const getYearsInfo = (months: number) => {
-  const years = months / 12;
-  if (months >= 36)
-    return {
-      label: `${Math.floor(years)}年`,
-      text: "text-white",
-      bg: "bg-teal-500",
-      ring: "ring-teal-300",
-    };
-  if (months >= 12)
-    return {
-      label: `${Math.floor(years)}年`,
-      text: "text-white",
-      bg: "bg-lime-500",
-      ring: "ring-lime-300",
-    };
-  if (months > 0)
-    return {
-      label: `${months}ヶ月`,
-      text: "text-gray-800",
-      bg: "bg-yellow-300",
-      ring: "ring-yellow-200",
-    };
-  return {
-    label: "New",
-    text: "text-gray-800",
-    bg: "bg-gray-200",
-    ring: "ring-gray-100",
-  };
+const getDurationLabel = (months: number) => {
+  if (months >= 12) return `${Math.floor(months / 12)}年`;
+  if (months > 0) return `${months}ヶ月`;
+  return "New";
+};
+
+const getDurationBadgeClass = (months: number) => {
+  if (months >= 36) return "bg-[#e94846]/10 text-[#e94846]";
+  if (months >= 12) return "bg-[#333d29]/10 text-[#333d29]";
+  return "bg-black/5 text-black/55";
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="
-    px-4 py-16 bg-gradient-to-r from-cyan-100/40 to-purple-100/40 backdrop-blur-sm"
+      className="px-6 pt-16 pb-28 md:pt-20 md:pb-36 bg-white border-t border-black/10"
     >
       <div className="container mx-auto">
-        <h2
-          className="
-            text-4xl font-bold mb-8 text-center
-     bg-clip-text text-transparent
-     bg-gradient-to-r from-sky-500 to-fuchsia-500
-     tracking-tight
-    "
-        >
-          Skills
-        </h2>
+        <div className="flex items-baseline gap-3 mb-16">
+          <h2 className="font-heading text-2xl font-bold text-[#16161d] tracking-tight">
+            Skills
+          </h2>
+        </div>
 
-        {skillCategories.map((category) => {
-          const gradientClass =
-            "bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-sky-500";
-
-          // React.cloneElementを使って、category.iconにグラデーションのスタイルを適用
-          const gradientIcon = React.cloneElement(category.icon, {
-            // fillプロパティを上書きして、SVGの塗りを強制的にテキストクリップに合わせる
-            className: `text-3xl mr-3 ${gradientClass}`,
-            fill: "url(#categoryGradient)", // SVGのグラデーションIDを参照（後で定義）
-          });
-
-          // SVGのグラデーション定義
-          const gradientDefinition = (
-            <svg width="0" height="0" className="absolute">
-              <defs>
-                <linearGradient
-                  id="categoryGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="0%"
-                >
-                  <stop
-                    offset="0%" // ★★★ Cyan-500 (#06b6d4) に変更 ★★★
-                    style={{ stopColor: "#06b6d4", stopOpacity: 1 }}
-                  />
-                  <stop
-                    offset="100%" // ★★★ Purple-500 (#a855f7) に変更 ★★★
-                    style={{ stopColor: "#a855f7", stopOpacity: 1 }}
-                  />
-                </linearGradient>
-              </defs>
-            </svg>
-          );
-
-          return (
-            <div key={category.title} className="mb-10">
-              {/* SVGグラデーション定義を配置（一度だけレンダリングされればOKだが、カテゴリ内に入れておく） */}
-              {gradientDefinition}
-
-              {/* カテゴリタイトルと文字長に合わせたグラデーション下線 */}
-              <h3
-                className="
-        text-2xl font-bold mb-6 
-        text-gray-800
-                // inline-flex: テキストの幅にh3の幅を合わせる
-        inline-flex relative pb-2 items-center
-                // before: 擬似要素を使って文字の長さに合わせたグラデーション下線を作成
-                before:content-[''] before:absolute before:bottom-0 before:left-0 
-                before:w-full before:h-1 
-                before:bg-gradient-to-r before:from-sky-500 before:to-fuchsia-500
-       "
-              >
-                {/* ★★★ 修正箇所: cloneElementで処理したアイコンを配置 ★★★ */}
-                {gradientIcon}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
+          {skillCategories.map((category, ci) => (
+            <motion.div
+              key={category.title}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeUp}
+            >
+              <h3 className="font-heading flex items-center gap-3 text-sm tracking-[0.1em] uppercase text-black/70 mb-6 pb-3 border-b border-black/10">
+                <span className="text-[10px] text-[#e94846] font-mono">
+                  0{ci + 1}
+                </span>
                 {category.title}
               </h3>
 
-              <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-                {category.skills.map((skill) => {
-                  const { label, text, bg } = getYearsInfo(skill.months);
-
-                  return (
-                    <li
-                      key={skill.name}
-                      className={`
-           p-5 flex flex-col items-start justify-between 
-           rounded-xl shadow-lg 
-           bg-white  text-gray-800 
-
-          `}
+              <ul className="flex flex-wrap gap-3">
+                {category.skills.map((skill) => (
+                  <li
+                    key={skill.name}
+                    className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-black/15 text-black/70 text-sm transition-all duration-300"
+                  >
+                    <span className="text-base">{skill.icon}</span>
+                    {skill.name}
+                    <span
+                      className={`text-xs font-mono font-semibold px-2 py-0.5 rounded-full ${getDurationBadgeClass(
+                        skill.months
+                      )}`}
                     >
-                      <div className="flex items-center mb-4">
-                        {/* スキル名とアイコン */}
-                        <span className="text-3xl mr-3">{skill.icon}</span>
-                        <span className="font-semibold text-lg">
-                          {skill.name}
-                        </span>
-                      </div>
-
-                      {/* ★ 年数を「React風コンポーネント」としてデザイン ★ */}
-                      <div
-                        className={`
-            ${bg} ${text} 
-            font-bold px-3 py-1 rounded-full text-xs
-            flex items-center shadow-md 
-            transition-transform duration-300
-            // Tailwind JITモードでは動的クラスの完全な組み合わせが必要
-           `}
-                      >
-                        {label}
-                      </div>
-                    </li>
-                  );
-                })}
+                      {getDurationLabel(skill.months)}
+                    </span>
+                  </li>
+                ))}
               </ul>
-            </div>
-          );
-        })}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

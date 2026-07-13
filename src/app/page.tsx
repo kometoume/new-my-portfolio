@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import HomeSection from "../components/HomeSection";
 import About from "../components/About";
+import Career from "../components/Career";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
@@ -18,6 +19,8 @@ export default function Home() {
       <HomeSection />
 
       <About />
+
+      <Career />
 
       <Skills />
 

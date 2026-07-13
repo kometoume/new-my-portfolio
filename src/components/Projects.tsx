@@ -1,163 +1,131 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { projects, Project } from "../data/projects";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
 
 const Projects = () => {
   return (
     <section
       id="projects"
-      className="container mx-auto px-4 py-16 bg-white  border-gray-200"
+      className="container mx-auto px-6 pt-16 pb-28 md:pt-20 md:pb-36 bg-white border-t border-black/10"
     >
-      <h2
-        className="
-            text-4xl font-bold mb-8 text-center
-            // ★ 文字グラデーション追加 ★
-            bg-clip-text
-            text-transparent
-            bg-gradient-to-r from-sky-500 to-fuchsia-500
-          "
-      >
-        Projects
-      </h2>
+      <div className="flex items-baseline gap-3 mb-16">
+        <h2 className="font-heading text-2xl font-bold text-[#16161d] tracking-tight">
+          Projects
+        </h2>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* projects.ts から読み込んだデータを map でループ処理 */}
-        {projects.map(
-          (
-            project: Project // Project 型を明示的に指定
-          ) => (
-            <div
-              key={project.id}
-              className="
-                p-5 // ★ 内側の余白 ★
-                flex flex-col h-full // 親要素の高さを合わせ、子要素を縦方向に配置
-                rounded-xl shadow-lg 
-                bg-white
-                text-gray-800 
-                
-                // Skillsカードのボーダー設定
-                border-2 border-transparent 
-                transition-all duration-300 ease-in-out 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project: Project, i: number) => (
+          <motion.div
+            key={project.id}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={cardVariants}
+            transition={{ delay: (i % 2) * 0.1 }}
+            className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#333d29]/50 hover:shadow-md"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-[10px] font-mono text-[#e94846] tracking-[0.2em]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+            </div>
 
-                // ★ ホバー効果追加 ★
-                hover:shadow-2xl hover:border-sky-500"
-            >
-              {project.image && ( // 画像がある場合のみ表示
-                <div
-                  className="mb-4 relative overflow-hidden rounded-md"
-                  style={{ paddingTop: "56.25%" /* 16:9 のアスペクト比 */ }}
+            {project.image && (
+              <div
+                className="mb-5 relative overflow-hidden rounded-lg bg-white border border-black/5"
+                style={{ aspectRatio: project.imageAspect ?? "700 / 300" }}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  style={{ objectFit: "contain" }}
+                  className="transition-all duration-500 ease-out"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+            )}
+
+            <h3 className="font-heading text-lg font-bold text-[#16161d] mb-3">
+              {project.title}
+            </h3>
+            <p className="text-black/55 mb-5 text-sm leading-relaxed">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="text-[11px] tracking-wide text-[#333d29] border border-[#333d29]/25 bg-[#333d29]/5 px-2.5 py-1 rounded-full"
                 >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill // 親要素に合わせて画像を埋める
-                    style={{ objectFit: "cover" }} // 画像がはみ出さないように調整
-                    className="rounded-md"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // レスポンシブ画像最適化のため
-                  />
-                </div>
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-[#e94846] text-xs tracking-[0.1em] uppercase font-mono mb-2">
+              Point
+            </p>
+            <ul className="text-black/55 text-sm mb-6 space-y-1">
+              {project.points.map((point, index) => (
+                <li key={index} className="hanging-indent">
+                  {point}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto flex flex-wrap gap-2 pt-2">
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
+                >
+                  Webサイト
+                </a>
               )}
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4 text-sm">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="
-                      bg-indigo-100/80  backdrop-blur-sm 
-                      
-                      text-indigo-700 
-                      
-                      text-xs font-semibold 
-                      px-2.5 py-0.5 rounded-full 
-                      
-                      // 立体感とホバー効果を維持
-                      shadow-md 
-                      transition duration-200 hover:opacity-90
-                    "
-                  >
-                    {tech} 
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-700 font-medium mb-3">ポイント:</p>
-              <ul className="list-disc list-inside text-gray-600 text-sm mb-4">
-                {project.points.map((point, index) => (
-                  <li key={index} className="hanging-indent">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto flex gap-2 justify-center">
-                {project.demoLink && (
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`
-                      inline-block
-                      bg-cyan-500 backdrop-blur-sm 
-                      text-white 
-                      px-6 py-2 rounded shadow-lg 
-                      transition-all duration-300 text-base font-semibold 
-                      hover:bg-cyan-200/90 hover:text-cyan-600 hover:shadow-xl
-                    `}
-                  >
-                    Webサイト
-                  </a>
-                )}
-                {project.githubLink && (
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`
-                      inline-block
-                      
-                      // ★★★ 通常時: 濃い半透明の背景と白文字 ★★★
-                      bg-purple-500 backdrop-blur-sm 
-                      text-white 
-                      
-                      px-6 py-2 rounded shadow-lg 
-                      transition-all duration-300 text-base font-semibold 
-                      
-                      // ★★★ ホバー時: 薄い背景、濃い文字に変更 ★★★
-                      hover:bg-purple-200/90 hover:text-purple-900 hover:shadow-xl
-                    `}
-                  >
-                    GitHub
-                  </a>
-                )}
-              </div>
-              {project.links && project.links.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2 justify-center">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="
-                        inline-block
-                        bg-fuchsia-100/80 backdrop-blur-sm
-                        text-fuchsia-700
-                        text-xs font-semibold
-                        px-3 py-1 rounded-full
-                        shadow-md
-                        transition duration-200 hover:bg-fuchsia-200
-                      "
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#e94846] text-[#e94846] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#e94846] hover:text-white"
+                >
+                  GitHub
+                </a>
               )}
             </div>
-          )
-        )}
+            {project.links && project.links.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] tracking-wide text-black/40 border border-black/10 px-3 py-1 rounded-full transition-colors duration-300 hover:text-[#16161d] hover:border-black/40"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </motion.div>
+        ))}
       </div>
     </section>
   );

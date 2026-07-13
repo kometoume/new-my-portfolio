@@ -6,6 +6,7 @@ export interface Project {
   title: string;
   description: string;
   image?: string; // 画像のパス (オプショナルにする)
+  imageAspect?: string; // 画像の縦横比 (例: "828 / 831")。未指定時は横長サムネイル用の比率を使用
   technologies: string[];
   githubLink?: string; // GitHubリポジトリのURL (任意)
   demoLink?: string; // デモサイトのURL (任意)
@@ -20,6 +21,8 @@ export const projects: Project[] = [
     title: "AI活用によるコンテンツ制作",
     description:
       "デザイン制作にAIツールを積極的に取り入れ、挿絵制作やセミナー用画像、動画・漫画コンテンツ、記事執筆まで幅広く対応しています。ChatGPTやManusなどのAIツールを活用し、制作スピードと表現の幅を広げています。",
+    image: "/images/ai-manga-thumbnail.png",
+    imageAspect: "828 / 831",
     technologies: ["ChatGPT", "Manus", "Adobe Illustrator", "AI動画生成", "note"],
     demoLink: "https://www.kenko-salon.com/kenko-insight",
     points: [
@@ -30,6 +33,10 @@ export const projects: Project[] = [
       "AIを活用したnote記事の執筆・公開",
     ],
     links: [
+      {
+        label: "AI作品集ページ",
+        url: "https://kometoume.github.io/design_portfolio/ai.html",
+      },
       {
         label: "AI動画 ①",
         url: "https://x.com/yppp_yakkyoku/status/2026854741930598406",
@@ -75,7 +82,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "client-website-scsk-nvidia",
+    id: "client-website-scsk-radius",
     title: "クライアントのWebサイト (導入事例、FAQなど)",
     description:
       "クライアントのWebサイトです。また、導入事例ページの追加やFAQページの設計・開発にも携わり、アコーディオン機能を活用したカテゴリ別の表示や、見やすさ・使いやすさに配慮したUI設計を行いました。",

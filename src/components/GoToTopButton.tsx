@@ -29,36 +29,33 @@ const GoToTopButton: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed right-6 z-50 bottom-20 sm:bottom-32 md:bottom-5">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="
-                p-3 shadow-lg transition-all duration-300 ease-in-out focus:outline-none cursor-pointer 
-                active:scale-95 active:shadow-2xl active:transform-none 
-                
-                // ★ ここからグラデーションのクラスに置き換えます ★
-                bg-gradient-to-r from-cyan-500/80 to-purple-500/80 // グラデーション背景
-                text-white                                    // アイコンの色を白に
-                hover:from-cyan-600 hover:to-purple-600       // ホバー時の色
-                rounded-lg                                    // 角を丸める（任意）
-          "
-          aria-label="ページトップへ戻る"
+    <div
+      className={`fixed right-6 bottom-6 z-50 transition-all duration-300 ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
+    >
+      <button
+        onClick={scrollToTop}
+        className="w-11 h-11 flex items-center justify-center rounded-full border border-[#333d29]/40 bg-white/80 backdrop-blur-md text-[#333d29] shadow-sm transition-all duration-300 hover:bg-[#333d29] hover:text-white hover:border-[#333d29] cursor-pointer"
+        aria-label="ページトップへ戻る"
+      >
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* 矢印アイコンを上向きに変更（より直感的になります） */}
-            <path d="M12 2L4 18H20L12 2Z" /> {/* 元の三角形 */}
-            {/* ★推奨：一般的な上向き矢印アイコン（より直感的）★
-             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-             */}
-          </svg>
-        </button>
-      )}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
+        </svg>
+      </button>
     </div>
   );
 };

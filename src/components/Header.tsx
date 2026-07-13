@@ -5,11 +5,11 @@ import React, { useState, useRef } from "react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
-  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Career", href: "#career" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
@@ -21,12 +21,8 @@ export default function Header() {
     if (!targetElement || !headerRef.current) return;
 
     const headerHeight = headerRef.current.offsetHeight;
-
-    // targetElement のページ上の位置を計算
     const elementPosition =
       targetElement.getBoundingClientRect().top + window.scrollY;
-
-    // ヘッダー分を引いた位置にスクロール
     const scrollPosition = elementPosition - headerHeight;
 
     window.scrollTo({ top: scrollPosition, behavior: "smooth" });
@@ -38,11 +34,8 @@ export default function Header() {
   ) => {
     e.preventDefault();
 
-    // モバイルメニューが開いている場合は閉じてからスクロール
     if (isOpen) {
       setIsOpen(false);
-
-      // メニューが閉じるレンダー後にスクロールする
       setTimeout(() => scrollToSection(href), 50);
     } else {
       scrollToSection(href);
@@ -52,27 +45,35 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed w-full z-50 bg-white shadow-md py-4 transition-all duration-300"
+      className="fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-white/80 backdrop-blur-md border-b border-black/10 transition-all duration-300"
     >
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center px-6">
         <a
           href="#home"
           onClick={(e) => handleLinkClick(e, "#home")}
-          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-purple-500"
+          className="flex flex-col leading-none"
         >
-          Michie Yagi Portfolio
+          <span className="font-heading text-sm font-bold tracking-[0.2em] text-[#333d29] uppercase">
+            Michie Yagi
+          </span>
+          <span className="text-[10px] tracking-[0.15em] text-black/40 uppercase mt-1">
+            Portfolio
+          </span>
         </a>
 
         {/* デスクトップメニュー */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-6">
-            {navItems.map((item) => (
+          <ul className="flex space-x-8">
+            {navItems.map((item, i) => (
               <li key={item.name}>
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="text-lg text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                  className="font-heading group flex items-center gap-1.5 text-xs tracking-[0.1em] uppercase text-black/50 hover:text-[#333d29] transition-colors duration-300"
                 >
+                  <span className="text-[10px] text-[#e94846]/80 group-hover:text-[#e94846] transition-colors duration-300 font-mono">
+                    0{i + 1}
+                  </span>
                   {item.name}
                 </a>
               </li>
@@ -84,56 +85,51 @@ export default function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl focus:outline-none text-gray-800 cursor-pointer"
+            className="relative z-50 w-8 h-8 flex flex-col items-center justify-center gap-[5px] cursor-pointer"
+            aria-label="メニューを開く"
           >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            <span
+              className={`block w-6 h-px bg-[#16161d] transition-transform duration-300 ${
+                isOpen ? "rotate-45 translate-y-[6px]" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-px bg-[#16161d] transition-opacity duration-300 ${
+                isOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`block w-6 h-px bg-[#16161d] transition-transform duration-300 ${
+                isOpen ? "-rotate-45 -translate-y-[6px]" : ""
+              }`}
+            />
           </button>
         </div>
       </div>
 
       {/* モバイルメニュー */}
-      {isOpen && (
-        <nav
-          ref={mobileMenuRef}
-          className="md:hidden bg-white py-4 transition-all duration-300"
-        >
-          <ul className="flex flex-col items-center space-y-4">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  onClick={(e) => handleLinkClick(e, item.href)}
-                  className="text-lg text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <nav
+        className={`md:hidden fixed inset-0 top-20 bg-white transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <ul className="flex flex-col items-center justify-center h-full gap-8 -mt-20">
+          {navItems.map((item, i) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                onClick={(e) => handleLinkClick(e, item.href)}
+                className="font-heading flex items-center gap-3 text-lg tracking-[0.1em] uppercase text-black/60 hover:text-[#333d29] transition-colors duration-300"
+              >
+                <span className="text-xs text-[#e94846]/80 font-mono">0{i + 1}</span>
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }
