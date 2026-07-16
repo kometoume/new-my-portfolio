@@ -21,10 +21,9 @@ export const projects: Project[] = [
     title: "AI活用によるコンテンツ制作",
     description:
       "デザイン制作にAIツールを積極的に取り入れ、挿絵制作やセミナー用画像、動画・漫画コンテンツ、記事執筆まで幅広く対応しています。ChatGPTやManusなどのAIツールを活用し、制作スピードと表現の幅を広げています。",
-    image: "/images/ai-manga-thumbnail.png",
-    imageAspect: "828 / 831",
+    image: "/images/ai-content-thumbnail.png",
+    imageAspect: "1536 / 1024",
     technologies: ["ChatGPT", "Manus", "Adobe Illustrator", "AI動画生成", "note"],
-    demoLink: "https://www.kenko-salon.com/kenko-insight",
     points: [
       "健康サロンのオウンドメディア記事にて、ChatGPTでプロンプトを生成し挿絵を作成",
       "セミナー用画像制作を、Illustratorでの手作業からAIツール「Manus」を活用した制作に移行し、スピードを向上",
@@ -36,34 +35,6 @@ export const projects: Project[] = [
       {
         label: "AI作品集ページ",
         url: "https://kometoume.github.io/design_portfolio/ai.html",
-      },
-      {
-        label: "AI動画 ①",
-        url: "https://x.com/yppp_yakkyoku/status/2026854741930598406",
-      },
-      {
-        label: "AI動画 ②",
-        url: "https://x.com/yppp_yakkyoku/status/2026129961212588221/video/1",
-      },
-      {
-        label: "AI漫画",
-        url: "https://x.com/yppp_yakkyoku/status/2019244593439498696/photo/1",
-      },
-      {
-        label: "note記事 ①",
-        url: "https://note.com/ypppofficial/n/n3cdf0c49ca4a",
-      },
-      {
-        label: "note記事 ②",
-        url: "https://note.com/ypppofficial/n/nfa6d673f1654",
-      },
-      {
-        label: "note記事 ③",
-        url: "https://note.com/ypppofficial/n/n3a89764fb31f",
-      },
-      {
-        label: "note記事 ④",
-        url: "https://note.com/ypppofficial/n/nf8f33c788faf",
       },
     ],
   },

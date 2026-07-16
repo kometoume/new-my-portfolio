@@ -117,7 +117,7 @@ const Projects = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] tracking-wide text-black/40 border border-black/10 px-3 py-1 rounded-full transition-colors duration-300 hover:text-[#16161d] hover:border-black/40"
+                    className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
                   >
                     {link.label}
                   </a>

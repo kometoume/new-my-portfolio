@@ -73,7 +73,7 @@ const skillCategories = [
     title: "バックエンド開発",
     icon: <FaServer />,
     skills: [
-      { name: "PHP", months: 12, icon: <SiPhp className="text-indigo-400" /> },
+      { name: "PHP", months: 3, icon: <SiPhp className="text-indigo-400" /> },
       {
         name: "Node.js",
         months: 1,
@@ -119,7 +119,7 @@ const skillCategories = [
     skills: [
       {
         name: "Adobe Photoshop",
-        months: 60,
+        months: 3,
         icon: <SiAdobephotoshop className="text-blue-500" />,
       },
       {
