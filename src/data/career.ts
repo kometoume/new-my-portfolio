@@ -21,7 +21,7 @@ export interface CareerEntry {
 export const careerEntries: CareerEntry[] = [
   {
     id: "kenko-salon",
-    company: "健康サロン株式会社",
+    company: "薬局経営者向けのサービス・コンサル会社",
     department: "マーケティング部門",
     period: "2025年12月 〜 現在",
     responsibilities: [
