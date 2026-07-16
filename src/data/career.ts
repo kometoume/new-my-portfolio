@@ -27,18 +27,18 @@ export const careerEntries: CareerEntry[] = [
     responsibilities: [
       "CRM（顧客管理システム）の運用・管理、顧客データを活用したメルマガ配信・セミナー集客導線の設計",
       "メルマガ配信（企画・原稿作成・配信設計）、セミナー開催（企画・運営・集客）",
-      "Meta広告（Facebook/Instagram）のA/Bテスト実施、効果検証に基づく改善提案",
+      "Google広告のA/Bテスト実施、効果検証に基づく改善提案",
       "SNS投稿・note記事作成（AIを活用したコンテンツ制作・効率化）",
       "Illustrator・Manusを用いたバナー、DM、ポスター、のぼり、ステッカー等の販促物の企画・制作",
       "FigmaによるLINE公式アカウントのリッチメニュー作成、Webデザイン制作",
       "AutoHotkey・Power Automateを用いた定型業務（業務開始/終了報告、日報作成）の自動化",
-      "電話対応（問い合わせ対応・顧客窓口業務）",
+      "電話対応（問い合わせ対応）",
       "Claude Code、Manus、ChatGPTを用途別に使い分けたAI活用による業務全般の効率化",
     ],
     achievements: [
       {
         title: "コンサル支援業務の書類作成効率化プロジェクト",
-        period: "2025年12月",
+        period: "2026年7月～",
         overview:
           "ハザードマップ等を組み込んだ提出書類作成業務が手作業中心で、処理件数に限界があった",
         task: "Claude Codeによる書類作成フローの構築",
@@ -46,14 +46,15 @@ export const careerEntries: CareerEntry[] = [
       },
       {
         title: "Google広告A/Bテストによる効果改善",
-        period: "2025年12月",
-        overview: "Google広告のクリエイティブ・ターゲティングの最適化",
-        task: "広告クリエイティブ・配信設定のパターンを複数用意しA/Bテストを実施、結果に基づく改善提案",
+        period: "2026年2月～",
+        overview:
+          "Google広告のクリエイティブ・訴求文言の比較検証による効果改善",
+        task: "バナークリエイティブを複数パターン（デザイン・訴求文言違い）作成し配信、パフォーマンスを比較して効果の高いパターンを特定・反映",
         result: "CPA・CVR等の指標改善に貢献",
       },
       {
         title: "定型業務の自動化プロジェクト",
-        period: "2025年12月",
+        period: "2026年4月～",
         overview:
           "業務開始/終了報告、日報作成など毎日発生する定型業務に時間を要していた",
         task: "AutoHotkeyによるワンクリック報告機能の実装、Power Automateによる日報作成フローの自動化",
@@ -62,7 +63,7 @@ export const careerEntries: CareerEntry[] = [
       },
       {
         title: "SNS・note運用によるコンテンツ発信強化",
-        period: "2025年12月",
+        period: "2025年12月～",
         overview:
           "AIツールを活用したSNS投稿・note記事作成のコンテンツ制作体制構築",
         task: "ChatGPT・Manusを用いたコンテンツ企画、制作、投稿",
@@ -70,11 +71,12 @@ export const careerEntries: CareerEntry[] = [
       },
       {
         title: "HubSpotによるメルマガ配信・セミナー運営",
-        period: "2025年12月",
+        period: "2025年12月～",
         overview:
           "メルマガ配信やセミナーの集客・運営が属人化しており、仕組み化されていなかった",
         task: "HubSpotを用いたメルマガの企画・配信設計、セミナーの集客導線設計から当日運営までを一貫して担当",
-        result: "メルマガ配信からセミナー運営までの一連のフローを整備し、継続的に実施できる体制を構築",
+        result:
+          "メルマガ配信からセミナー運営までの一連のフローを整備し、継続的に実施できる体制を構築",
       },
     ],
     points: [

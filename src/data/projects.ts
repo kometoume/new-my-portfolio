@@ -23,9 +23,15 @@ export const projects: Project[] = [
       "デザイン制作にAIツールを積極的に取り入れ、挿絵制作やセミナー用画像、動画・漫画コンテンツ、記事執筆まで幅広く対応しています。ChatGPTやManusなどのAIツールを活用し、制作スピードと表現の幅を広げています。",
     image: "/images/ai-content-thumbnail.png",
     imageAspect: "1536 / 1024",
-    technologies: ["ChatGPT", "Manus", "Adobe Illustrator", "AI動画生成", "note"],
+    technologies: [
+      "ChatGPT",
+      "Manus",
+      "Adobe Illustrator",
+      "AI動画生成",
+      "note",
+    ],
     points: [
-      "健康サロンのオウンドメディア記事にて、ChatGPTでプロンプトを生成し挿絵を作成",
+      "オウンドメディア記事にて、ChatGPTでプロンプトを生成し挿絵を作成",
       "セミナー用画像制作を、Illustratorでの手作業からAIツール「Manus」を活用した制作に移行し、スピードを向上",
       "AIを活用した動画コンテンツを企画・生成し、SNS(X)で発信",
       "AIによる漫画形式のコンテンツ生成にも挑戦",
