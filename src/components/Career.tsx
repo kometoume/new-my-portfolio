@@ -87,7 +87,7 @@ const Career = () => {
                   viewport={{ once: true, amount: 0.01 }}
                   custom={(i % 2) * 0.1}
                   variants={cardVariants}
-                  className="flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
+                  className="flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono text-[#e94846] tracking-[0.2em]">
