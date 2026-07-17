@@ -43,10 +43,11 @@ export default function Header() {
   };
 
   return (
-    <header
-      ref={headerRef}
-      className="fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-white/80 backdrop-blur-md border-b border-black/10 transition-all duration-300"
-    >
+    <>
+      <header
+        ref={headerRef}
+        className="fixed top-0 left-0 w-full z-50 h-20 flex items-center bg-white/80 backdrop-blur-md border-b border-black/10 transition-all duration-300"
+      >
       <div className="container mx-auto flex justify-between items-center px-6">
         <a
           href="#home"
@@ -106,16 +107,17 @@ export default function Header() {
           </button>
         </div>
       </div>
+      </header>
 
       {/* モバイルメニュー */}
       <nav
-        className={`md:hidden fixed inset-0 top-20 bg-white transition-all duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 top-20 bg-white z-40 transition-all duration-300 ease-in-out ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <ul className="flex flex-col items-center justify-center h-full gap-8 -mt-20">
+        <ul className="flex flex-col items-center gap-8 pt-16">
           {navItems.map((item, i) => (
             <li key={item.name}>
               <a
@@ -130,6 +132,6 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-    </header>
+    </>
   );
 }
