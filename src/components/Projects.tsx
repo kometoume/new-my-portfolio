@@ -6,11 +6,11 @@ import { projects, Project } from "../data/projects";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 32 },
-  visible: {
+  visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.35, ease: "easeOut" as const },
-  },
+    transition: { duration: 0.35, ease: "easeOut" as const, delay },
+  }),
 };
 
 const Projects = () => {
@@ -32,8 +32,8 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.01 }}
+            custom={(i % 2) * 0.1}
             variants={cardVariants}
-            transition={{ delay: (i % 2) * 0.1, duration: 0.35, ease: "easeOut" }}
             className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#333d29]/50 hover:shadow-md"
           >
             <div className="flex items-center justify-between mb-4">
