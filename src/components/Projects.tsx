@@ -37,7 +37,7 @@ const Projects = () => {
             className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#333d29]/50 hover:shadow-md"
           >
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] font-mono text-[#e94846] tracking-[0.2em]">
+              <span className="text-xs font-mono text-[#e94846] tracking-[0.2em]">
                 {String(i + 1).padStart(2, "0")}
               </span>
             </div>
@@ -58,10 +58,10 @@ const Projects = () => {
               </div>
             )}
 
-            <h3 className="font-heading text-lg font-bold text-[#16161d] mb-3">
+            <h3 className="font-heading text-xl font-bold text-[#16161d] mb-3">
               {project.title}
             </h3>
-            <p className="text-black/55 mb-5 text-sm leading-relaxed">
+            <p className="text-[#16161d] mb-5 text-base md:text-lg leading-relaxed">
               {project.description}
             </p>
 
@@ -69,17 +69,17 @@ const Projects = () => {
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="text-[11px] tracking-wide text-[#333d29] border border-[#333d29]/25 bg-[#333d29]/5 px-2.5 py-1 rounded-full"
+                  className="text-xs tracking-wide text-[#333d29] border border-[#333d29]/25 bg-[#333d29]/5 px-2.5 py-1 rounded-full"
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            <p className="text-[#e94846] text-xs tracking-[0.1em] uppercase font-mono mb-2">
+            <p className="text-[#e94846] text-sm tracking-[0.1em] uppercase font-mono mb-2">
               Point
             </p>
-            <ul className="text-black/55 text-sm mb-6 space-y-1">
+            <ul className="text-[#16161d] text-base md:text-lg mb-6 space-y-1">
               {project.points.map((point, index) => (
                 <li key={index} className="hanging-indent">
                   {point}
@@ -93,7 +93,7 @@ const Projects = () => {
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
+                  className="inline-flex items-center gap-1.5 text-sm tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
                 >
                   Webサイト
                 </a>
@@ -103,7 +103,7 @@ const Projects = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#e94846] text-[#e94846] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#e94846] hover:text-white"
+                  className="inline-flex items-center gap-1.5 text-sm tracking-[0.05em] uppercase border border-[#e94846] text-[#e94846] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#e94846] hover:text-white"
                 >
                   GitHub
                 </a>
@@ -117,7 +117,7 @@ const Projects = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
+                    className="inline-flex items-center gap-1.5 text-sm tracking-[0.05em] uppercase border border-[#333d29] text-[#333d29] px-5 py-2.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white"
                   >
                     {link.label}
                   </a>

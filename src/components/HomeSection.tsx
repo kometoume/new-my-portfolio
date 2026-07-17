@@ -176,7 +176,7 @@ const HomeSection = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center overflow-hidden bg-white"
+      className="relative flex flex-col items-center justify-center min-h-[60vh] md:min-h-[65vh] text-center overflow-hidden bg-white"
     >
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_rgba(61,90,254,0.10),_transparent_60%)]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(255,122,41,0.10),_transparent_55%)]" />

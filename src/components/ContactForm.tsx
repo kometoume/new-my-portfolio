@@ -80,7 +80,7 @@ export default function ContactForm() {
         <div className="mb-8">
           <label
             htmlFor="name"
-            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
+            className="block text-sm tracking-[0.15em] uppercase text-black/40 mb-3"
           >
             お名前
           </label>
@@ -100,7 +100,7 @@ export default function ContactForm() {
         <div className="mb-8">
           <label
             htmlFor="email"
-            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
+            className="block text-sm tracking-[0.15em] uppercase text-black/40 mb-3"
           >
             メールアドレス
           </label>
@@ -120,7 +120,7 @@ export default function ContactForm() {
         <div className="mb-10">
           <label
             htmlFor="message"
-            className="block text-xs tracking-[0.15em] uppercase text-black/40 mb-3"
+            className="block text-sm tracking-[0.15em] uppercase text-black/40 mb-3"
           >
             メッセージ
           </label>
@@ -140,7 +140,7 @@ export default function ContactForm() {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className={`inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#333d29] text-[#333d29] px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white focus:outline-none ${
+            className={`inline-flex items-center gap-2 text-sm tracking-[0.15em] uppercase border border-[#333d29] text-[#333d29] px-8 py-3.5 rounded-full transition-all duration-300 hover:bg-[#333d29] hover:text-white focus:outline-none ${
               isSubmitting ? "opacity-40 cursor-not-allowed" : "cursor-pointer"
             }`}
             disabled={isSubmitting}

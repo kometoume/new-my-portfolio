@@ -176,8 +176,8 @@ const Skills = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeUp}
             >
-              <h3 className="font-heading flex items-center gap-3 text-sm tracking-[0.1em] uppercase text-black/70 mb-6 pb-3 border-b border-black/10">
-                <span className="text-[10px] text-[#e94846] font-mono">
+              <h3 className="font-heading flex items-center gap-3 text-base tracking-[0.1em] uppercase text-black/70 mb-6 pb-3 border-b border-black/10">
+                <span className="text-xs text-[#e94846] font-mono">
                   0{ci + 1}
                 </span>
                 {category.title}
@@ -187,12 +187,12 @@ const Skills = () => {
                 {category.skills.map((skill) => (
                   <li
                     key={skill.name}
-                    className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-black/15 text-black/70 text-sm transition-all duration-300"
+                    className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-black/15 text-[#16161d] text-base md:text-lg transition-all duration-300"
                   >
-                    <span className="text-base">{skill.icon}</span>
+                    <span className="text-lg">{skill.icon}</span>
                     {skill.name}
                     <span
-                      className={`text-xs font-mono font-semibold px-2 py-0.5 rounded-full ${getDurationBadgeClass(
+                      className={`text-sm font-mono font-semibold px-2 py-0.5 rounded-full ${getDurationBadgeClass(
                         skill.months
                       )}`}
                     >

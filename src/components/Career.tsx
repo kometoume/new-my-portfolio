@@ -47,11 +47,11 @@ const Career = () => {
                 <h3 className="font-heading text-xl font-bold text-[#16161d]">
                   {entry.company}
                 </h3>
-                <p className="text-sm text-black/50 mt-1">
+                <p className="text-base text-black/50 mt-1">
                   {entry.department}
                 </p>
               </div>
-              <span className="text-xs font-mono tracking-[0.1em] text-[#e94846]">
+              <span className="text-sm font-mono tracking-[0.1em] text-[#e94846]">
                 {entry.period}
               </span>
             </motion.div>
@@ -63,10 +63,10 @@ const Career = () => {
               variants={fadeUp}
               className="mb-12"
             >
-              <p className="text-[#e94846] text-xs tracking-[0.1em] uppercase font-mono mb-4">
+              <p className="text-[#e94846] text-sm tracking-[0.1em] uppercase font-mono mb-4">
                 担当業務
               </p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-black/65 text-sm leading-relaxed">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-[#16161d] text-base md:text-lg leading-relaxed">
                 {entry.responsibilities.map((item, index) => (
                   <li key={index} className="hanging-indent">
                     ・{item}
@@ -75,7 +75,7 @@ const Career = () => {
               </ul>
             </motion.div>
 
-            <p className="text-[#e94846] text-xs tracking-[0.1em] uppercase font-mono mb-4">
+            <p className="text-[#e94846] text-sm tracking-[0.1em] uppercase font-mono mb-4">
               成果・実績
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -90,36 +90,36 @@ const Career = () => {
                   className="flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-mono text-[#e94846] tracking-[0.2em]">
+                    <span className="text-xs font-mono text-[#e94846] tracking-[0.2em]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-[11px] font-mono text-black/35 tracking-[0.1em]">
+                    <span className="text-xs font-mono text-black/35 tracking-[0.1em]">
                       {achievement.period}
                     </span>
                   </div>
-                  <h4 className="font-heading text-base font-bold text-[#16161d] mb-4">
+                  <h4 className="font-heading text-lg font-bold text-[#16161d] mb-4">
                     {achievement.title}
                   </h4>
 
-                  <dl className="space-y-3 text-sm">
+                  <dl className="space-y-3 text-base md:text-lg">
                     <div>
-                      <dt className="text-[11px] tracking-[0.1em] text-black/40 uppercase font-mono mb-1">
+                      <dt className="text-xs tracking-[0.1em] text-black/40 uppercase font-mono mb-1">
                         概要
                       </dt>
-                      <dd className="text-black/60 leading-relaxed">
+                      <dd className="text-[#16161d] leading-relaxed">
                         {achievement.overview}
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-[11px] tracking-[0.1em] text-black/40 uppercase font-mono mb-1">
+                      <dt className="text-xs tracking-[0.1em] text-black/40 uppercase font-mono mb-1">
                         担当業務
                       </dt>
-                      <dd className="text-black/60 leading-relaxed">
+                      <dd className="text-[#16161d] leading-relaxed">
                         {achievement.task}
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-[11px] tracking-[0.1em] text-[#333d29] uppercase font-mono mb-1">
+                      <dt className="text-xs tracking-[0.1em] text-[#333d29] uppercase font-mono mb-1">
                         成果
                       </dt>
                       <dd className="text-[#16161d] font-medium leading-relaxed">
@@ -137,10 +137,10 @@ const Career = () => {
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeUp}
             >
-              <p className="text-[#e94846] text-xs tracking-[0.1em] uppercase font-mono mb-3">
+              <p className="text-[#e94846] text-sm tracking-[0.1em] uppercase font-mono mb-3">
                 Point
               </p>
-              <ul className="text-black/55 text-sm space-y-1.5">
+              <ul className="text-[#16161d] text-base md:text-lg space-y-1.5">
                 {entry.points.map((point, index) => (
                   <li key={index} className="hanging-indent">
                     ・{point}
