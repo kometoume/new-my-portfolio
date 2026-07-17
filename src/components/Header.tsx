@@ -54,10 +54,10 @@ export default function Header() {
           onClick={(e) => handleLinkClick(e, "#home")}
           className="flex flex-col leading-none"
         >
-          <span className="font-heading text-sm font-bold tracking-[0.2em] text-[#333d29] uppercase">
+          <span className="font-heading text-base font-bold tracking-[0.2em] text-[#333d29] uppercase">
             Michie Yagi
           </span>
-          <span className="text-[10px] tracking-[0.15em] text-black/40 uppercase mt-1">
+          <span className="text-xs tracking-[0.15em] text-black/40 uppercase mt-1">
             Portfolio
           </span>
         </a>
@@ -70,9 +70,9 @@ export default function Header() {
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="font-heading group flex items-center gap-1.5 text-xs tracking-[0.1em] uppercase text-black/50 hover:text-[#333d29] transition-colors duration-300"
+                  className="font-heading group flex items-center gap-1.5 text-sm tracking-[0.1em] uppercase text-black/50 hover:text-[#333d29] transition-colors duration-300"
                 >
-                  <span className="text-[10px] text-[#e94846]/80 group-hover:text-[#e94846] transition-colors duration-300 font-mono">
+                  <span className="text-xs text-[#e94846]/80 group-hover:text-[#e94846] transition-colors duration-300 font-mono">
                     0{i + 1}
                   </span>
                   {item.name}
