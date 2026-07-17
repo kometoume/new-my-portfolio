@@ -7,7 +7,7 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.35, ease: "easeOut" as const },
   },
 };
 
@@ -28,7 +28,7 @@ const About = () => {
           <motion.p
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.01 }}
             variants={fadeUp}
             className="text-base md:text-lg leading-loose mb-8"
           >
@@ -43,7 +43,7 @@ const About = () => {
             <motion.p
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.01 }}
               variants={fadeUp}
               className="text-base md:text-lg leading-loose"
             >

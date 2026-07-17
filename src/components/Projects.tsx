@@ -9,7 +9,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.35, ease: "easeOut" as const },
   },
 };
 
@@ -31,7 +31,7 @@ const Projects = () => {
             key={project.id}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.01 }}
             variants={cardVariants}
             transition={{ delay: (i % 2) * 0.1 }}
             className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#333d29]/50 hover:shadow-md"

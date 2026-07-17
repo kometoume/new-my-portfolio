@@ -8,7 +8,7 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.35, ease: "easeOut" as const },
   },
 };
 
@@ -17,7 +17,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
+    transition: { duration: 0.35, ease: "easeOut" as const },
   },
 };
 
@@ -39,7 +39,7 @@ const Career = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.01 }}
               variants={fadeUp}
               className="mb-10 pb-6 border-b border-black/10 flex flex-col md:flex-row md:items-end md:justify-between gap-2"
             >
@@ -59,7 +59,7 @@ const Career = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.01 }}
               variants={fadeUp}
               className="mb-12"
             >
@@ -84,7 +84,7 @@ const Career = () => {
                   key={achievement.title}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.01 }}
                   variants={cardVariants}
                   transition={{ delay: (i % 2) * 0.1 }}
                   className="flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
@@ -134,7 +134,7 @@ const Career = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.01 }}
               variants={fadeUp}
             >
               <p className="text-[#e94846] text-sm tracking-[0.1em] uppercase font-mono mb-3">

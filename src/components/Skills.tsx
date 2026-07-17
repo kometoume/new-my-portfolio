@@ -151,7 +151,7 @@ const getDurationBadgeClass = (months: number) => {
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" as const } },
 };
 
 const Skills = () => {
@@ -173,7 +173,7 @@ const Skills = () => {
               key={category.title}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.01 }}
               variants={fadeUp}
             >
               <h3 className="font-heading flex items-center gap-3 text-base tracking-[0.1em] uppercase text-black/70 mb-6 pb-3 border-b border-black/10">
