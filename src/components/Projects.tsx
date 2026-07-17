@@ -33,7 +33,7 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.01 }}
             variants={cardVariants}
-            transition={{ delay: (i % 2) * 0.1 }}
+            transition={{ delay: (i % 2) * 0.1, duration: 0.35, ease: "easeOut" }}
             className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#333d29]/50 hover:shadow-md"
           >
             <div className="flex items-center justify-between mb-4">
