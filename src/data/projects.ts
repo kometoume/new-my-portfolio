@@ -12,6 +12,7 @@ export interface Project {
   demoLink?: string; // デモサイトのURL (任意)
   points: string[]; // 工夫した点や特徴
   links?: { label: string; url: string }[]; // 関連リンク（複数）
+  privateNote?: string; // 現職に関する内容などでリンクを非公開にする場合の注記
 }
 
 // プロジェクトデータの配列
@@ -36,12 +37,7 @@ export const projects: Project[] = [
       "AIによる漫画形式のコンテンツ生成にも挑戦",
       "AIを活用したnote記事の執筆・公開",
     ],
-    links: [
-      {
-        label: "AI作品集ページ",
-        url: "https://kometoume.github.io/design_portfolio/ai.html",
-      },
-    ],
+    privateNote: "現職に関連する内容を含むため、詳細は別途ご案内いたします",
   },
   {
     id: "design",
@@ -50,12 +46,12 @@ export const projects: Project[] = [
       "架空のキャンペーンを想定して制作したバナーデザインや、Figmaを使ったデザイン練習の途中経過をまとめたページです。レイアウト・配色・フォント選定などの基礎を意識しながら、目的に合わせたビジュアル表現を試みています。",
     image: "/images/project-design-thumbnail.jpg",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
-    demoLink: "https://kometoume.github.io/design_portfolio/",
     points: [
       "架空のキャンペーン・新商品告知・イベント用などを想定して制作",
       "Figmaを使用したデザイン練習や途中段階のレイアウトも掲載",
       "ブランドイメージや目的に合わせ、視覚的に訴求できる構成を意識",
     ],
+    privateNote: "現職に関連する内容を含むため、詳細は別途ご案内いたします",
   },
   {
     id: "client-website-scsk-radius",

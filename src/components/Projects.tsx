@@ -124,6 +124,11 @@ const Projects = () => {
                 ))}
               </div>
             )}
+            {project.privateNote && (
+              <p className="mt-auto pt-2 text-sm text-black/40 leading-relaxed border-t border-black/10">
+                ※{project.privateNote}
+              </p>
+            )}
           </motion.div>
         ))}
       </div>
