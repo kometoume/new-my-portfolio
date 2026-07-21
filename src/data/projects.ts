@@ -22,7 +22,6 @@ export const projects: Project[] = [
     title: "AI活用によるコンテンツ制作",
     description:
       "デザイン制作にAIツールを積極的に取り入れ、挿絵制作やセミナー用画像、動画・漫画コンテンツ、記事執筆まで幅広く対応しています。ChatGPTやManusなどのAIツールを活用し、制作スピードと表現の幅を広げています。",
-    image: "/images/ai-content-thumbnail.png",
     technologies: [
       "ChatGPT",
       "Manus",
@@ -44,7 +43,6 @@ export const projects: Project[] = [
     title: "デザイン一覧",
     description:
       "架空のキャンペーンを想定して制作したバナーデザインや、Figmaを使ったデザイン練習の途中経過をまとめたページです。レイアウト・配色・フォント選定などの基礎を意識しながら、目的に合わせたビジュアル表現を試みています。",
-    image: "/images/project-design-thumbnail.jpg",
     technologies: ["Adobe Photoshop", "Adobe Illustrator", "Figma"],
     points: [
       "架空のキャンペーン・新商品告知・イベント用などを想定して制作",
